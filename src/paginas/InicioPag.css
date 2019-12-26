@@ -1,0 +1,34 @@
+.Inicio-grid {
+    display: grid;
+    grid-template-areas: 
+        'idx det det det det det'
+        'pie pie pie pie pie pie';
+        grid-column-gap: 10px;
+}
+
+.Inicio-indice {
+    grid-area: idx;
+    background-color: #eff;
+    padding: 10px;
+    text-align: left;
+}
+
+.Inicio-detalle {
+    grid-area: det;
+}
+
+.Inicio-pie {
+    grid-area: pie;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #eee;
+}
+
+@media (max-width: 600px) {
+    .Inicio-grid {
+        grid-template-areas: 
+        'idx idx idx idx idx idx'
+        'det det det det det det'
+        'pie pie pie pie pie pie';
+    }
+}

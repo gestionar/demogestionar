@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Plantilla de disposición de página"
+    />
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the sup */
+    .sup {
+      grid-area: sup;
+      background-color: #efe;
+      padding: 15px;
+      font-size: 25px;
+    }
+    
+    /* The grid container */
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+        'sup sup sup sup sup sup' 
+        'sec det det det det det' 
+        'pie pie pie pie pie pie';
+      /* grid-column-gap: 10px; - if you want gap between the columns */
+    } 
+    
+    .sec,
+    .det {
+      margin: 5px;
+      padding: 10px;
+      height: 600px; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Style the sec column */
+    .sec {
+      grid-area: sec;
+    }
+    
+    /* Style the der column */
+    .det {
+      grid-area: det;
+    }    
+    
+    /* Style the pie */
+    .pie {
+      grid-area: pie;
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* el sup responsible */
+    .logo {
+      float: left;
+    }
+    .logo a {
+      color: #777;
+      font-size: 18px;
+      padding: 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .logo a:hover {
+      background-color: aqua;
+    }
+    .menu {
+      float: right;
+    }
+    
+    .boton-link {
+      background-color: #ddd;
+      color: #000;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+    .boton-link:hover {
+      background-color: #eee;
+    }
+
+
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      .grid-container  {
+        grid-template-areas: 
+          'sup sup sup sup sup sup' 
+          'det det det det det det' 
+          'sec sec sec sec sec sec' 
+          'pie pie pie pie pie pie';
+      }
+      .sec,
+      .der {
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+      }
+      .sup {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .logo {
+        display: none;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+      <div class="sup">
+        <div class="logo">
+          <a href="#raiz" >Logo</a>
+        </div>
+        <div class="menu">
+          <a class="boton-link" href="#inicio">Incio</a>
+          <a class="boton-link" href="#contactos">Contactos</a>
+          <a class="boton-link" href="#configuracion">Configuración</a>
+        </div>    
+      </div>
+      
+      <div class="sec" style="background-color:#fee;">Menú Secundario</div>
+      <div class="det">Detalle</div>  
+     
+      
+      <div class="pie">
+        <p>pie</p>
+      </div>
+    </div>    
+</body>
+</html>

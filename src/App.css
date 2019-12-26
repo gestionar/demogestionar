@@ -1,0 +1,64 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  padding: 5px;
+  font-size: 25px;
+  background-color: #fef;
+}
+.App-logo {
+  float: left;
+}
+.App-logo a {
+  color: #888;
+  background-color: #ffe;
+  font-size: 18px;
+  padding: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.App-logo a:hover {
+  background-color: #eff;
+}
+.App-menu {
+  float: right;
+  margin: 5px;
+}
+.btn-menu {
+  background-color: #eee;
+  color: #000;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  margin: 2px;
+}
+.btn-menu:hover {
+  background-color: #eff;
+}
+
+.App-cuerpo {
+  text-align: center;
+}
+
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .App-header {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .App-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .App-logo {
+    display: none;
+  }
+}
