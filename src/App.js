@@ -14,10 +14,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className="App-logo">
-            <a href="#raiz" >Logo</a>
+            <a href="http://gestionar.github.io/demogestionar">Logo</a>
           </div>
           <div className="App-menu">
-            <Link className="btn-menu" to='/'>Incio</Link>        
+            <Link className="btn-menu" to='/inicio'>Incio</Link>        
             <Link className="btn-menu" to='/contactos'>Contactos</Link>
             <Link className="btn-menu" to='/cuentas'>Cuentas</Link>
             <Link className="btn-menu" to='/configuracion'>Configuración</Link>
@@ -25,7 +25,7 @@ class App extends Component {
         </header>
         <div className="App-cuerpo">
           <Switch>
-            <Route exact path='/' render={() => <InicioPag />}/> 
+            <Route exact path='/inicio' render={() => <InicioPag />}/> 
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
           </Switch>
         </div>
