@@ -6,16 +6,15 @@
 .App-header {
   padding: 5px;
   font-size: 25px;
-  background-color: #fef;
 }
 .App-logo {
   float: left;
 }
 .App-logo a {
-  color: #888;
-  background-color: #ffe;
+  height: 20px;
   font-size: 18px;
-  padding: 12px;
+  color: #000;
+  padding: 20px;
   font-weight: bold;
   text-decoration: none;
 }

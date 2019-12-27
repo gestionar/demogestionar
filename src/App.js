@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
-import InicioPag from './paginas/InicioPag'
-import ContactosPag from './paginas/ContactosPag'
+import InicioPag from './paginas/InicioPag';
+import ContactosPag from './paginas/ContactosPag';
+import logo from './luzInfo.svg';
 
 class App extends Component {
   constructor () {
@@ -14,7 +15,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className="App-logo">
-            <a href="http://gestionar.github.io/demogestionar">Logo</a>
+          <a href="http://gestionar.github.io/demogestionar">
+            <img src={logo} alt="logo"></img>
+          </a>
           </div>
           <div className="App-menu">
             <Link className="btn-menu" to='/inicio'>Incio</Link>        
