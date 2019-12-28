@@ -3,16 +3,17 @@ Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medi
 ## BPP (Buenas Prácticas de Programación)
 
 ### Árbol de ficheros de src
-paginas
-componentes
-servicios
-modelos (provisoria con datos que devolverá la api en el back)
-utiles
-varios
+
+ * paginas
+ * componentes
+ * servicios
+ * modelos (provisoria con datos que devolverá la api en el back)
+ * utiles
+ * varios
   
 La carpeta **servicios** tiene las llamadas AJAX a la api del back, todos los módulos de comunicación a la API se encuentran en esta carpeta
 
-Nombres de variables
+### Nombres de variables
   Métodos
   Módulos
 
