@@ -1,3 +1,33 @@
+Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas.
+
+## BPP (Buenas Prácticas de Programación)
+
+### Árbol de ficheros de src
+paginas
+componentes
+servicios
+modelos (provisoria con datos que devolverá la api en el back)
+utiles
+varios
+  
+La carpeta **servicios** tiene las llamadas AJAX a la api del back, todos los módulos de comunicación a la API se encuentran en esta carpeta
+
+Nombres de variables
+  Métodos
+  Módulos
+
+componentes: empiezan con mayúscula (fichero y archivo.jsx)
+variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos, ej. atiendeClik,
+
+ - [ ] ES6 funciones flecha, let y const
+ - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
+
+
+
+
+## Machete de comandos git para inicar la colaborción remota, editar el proyecto y desplegar páginas
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
