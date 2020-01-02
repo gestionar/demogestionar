@@ -1,8 +1,13 @@
 Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas.
 
+## Objetivos
+ - Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
+ - Implementar normas de estandarización que faciliten el desarrollo en equipo
+ - Detallar el plan a largo plazo, el propósito y la visión del proyecto general
+
 ## BPP (Buenas Prácticas de Programación)
 
-### Árbol de ficheros de src
+### Árbol de ficheros del codigo fuente (src)
 
  * paginas
  * componentes
@@ -17,12 +22,14 @@ La carpeta **servicios** tiene las llamadas AJAX a la api del back, todos los m�
   Métodos
   Módulos
 
-componentes: empiezan con mayúscula (fichero y archivo.jsx)
-variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos, ej. atiendeClik,
+componentes: empiezan con mayúscula (fichero y archivo.jsx).<br />
+variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos.<br />
+Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
  - [ ] ES6 funciones flecha, let y const
  - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
-
+ 
+ 
 
 
 
