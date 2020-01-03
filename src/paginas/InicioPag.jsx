@@ -1,28 +1,21 @@
 import React from 'react';
 import './InicioPag.css';
+import BotonesIncio from '../componentes/BotonesInicio'
 
 const InicioPag = () => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
-        <h1>Funciones básicas y atajos de teclado</h1>
+        <h1>Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas</h1>
         <h4>
-          Para una mejor experiencia habilite la pantalla completa con la tecla F11.
+          Objetivos
         </h4>
-        <p>
-          Descripción incial o bienvenida con tips y demostraciones del funcionamiento básico
-          de la aplicación, podría estár acá también un buscador de contenido general que
-          permita acceder a lugares frecuentes de trabajo.
+        <p>- Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores<br />
+          - Implementar normas de estandarización que faciliten el desarrollo en equipo<br />
+          - Detallar el plan a largo plazo, el propósito y la visión del proyecto general<br />
         </p>
         <section>
-          Pensaba en utilizar esta sección como ayuda de notas y bocetos de lo que va a ir pasando
-          con el proyecto y todo esto también es una forma de llenar la página de texto cuyo
-          único propósito es desplegar algo que sirva de relleno para tener una idea de como 
-          a ir siendo mostrada la información, como un:
-
-          pero casero.
-          <hr />
-            <var>eee</var>
+          Página de testeo de código
           <hr />
         </section>
         <code style={{"color": "#888"}}>
@@ -36,11 +29,12 @@ const InicioPag = () => {
       </div>
 
       <div className="Inicio-indice">
-          <h3>Índice</h3>
-          <p>Sección 1<hr />Sección 2<hr />Sección 3<hr />Sección y así<hr /></p>
+        <h3>Índice</h3>
+        <BotonesIncio opciones={["Introducción", "Objetivos", "Plan"]}/>
+        <p>Las props van a venir del componente de más alto nivel "App". Ver como referenciar secciones de la página usando Routes</p>
       </div>
       <div className="Inicio-pie">
-          <p>Anterior</p><p>Pie de página</p><p>Siguiente</p>
+        <p>Anterior</p><p>Pie de página</p><p>Siguiente</p>
       </div>  
     </div>
   );

@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {menu: ["Inicio", "contactos", "cuentas", "configuración"]}
   }
   render () {
-    return (      
+    return (
       <div className="App">
         <header className="App-header">
           <div className="App-logo">
@@ -28,7 +28,7 @@ class App extends Component {
         </header>
         <div className="App-cuerpo">
           <Switch>
-            <Route exact path='/inicio' render={() => <InicioPag />}/> 
+            <Route exact path='/inicio' render={() => <InicioPag />} />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
           </Switch>
         </div>

@@ -29,7 +29,7 @@ Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medi
   Métodos
   Módulos
 
-componentes: empiezan con mayúscula (fichero y archivo.jsx).<br />
+componentes: empiezan con mayúscula (fichero y archivo.jsx). Para diferenciarlos de las etiquetas html convencionales. Ejemplo: FilaCliente, BtnNuevoRegistro<br />
 variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos.<br />
 Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
@@ -41,6 +41,44 @@ Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
 
 ## Machete de comandos git para inicar la colaborción remota, editar el proyecto y desplegar páginas
+
+Ver documentación: https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+
+Clonar el repositorio y copiar la url
+
+Abrir una terminal en la carpeta superior al proyecto y escribir:
+´´´
+git clone _URL del repositorio remoto_
+´´´
+esto crea una carpeta con el nombre del repositorio y directorio .git oculto con los datos de configuración del repositorio
+```
+git remote -v
+```
+te muestra la dirección de github del repo que acabas de crear<br />
+
+crear un vínculo con el repo para actualizar el local (si el dueño original es otro, primero hay que hacer un fork, después copiar el url del repo en nuestro perfil)
+
+git remote add upstream (url de repo original en github)
+
+para actualizar desde el original
+
+git pull origin master
+
+luego de la edisión del proyecto para agregar los cambios:
+
+git add .
+
+git commit -m _texto descriptivo de los cambios_
+
+git push origin master
+
+Para desplegar a gh-pages:
+
+https://github.com/gitname/react-gh-pages/blob/master/README.md
+
+```
+$ npm run deploy
+```
 
 
 #### Cloning Your Copy of the Repository Locally
@@ -128,3 +166,6 @@ Once you have resolved these merge conflicts by editing the code and removing th
 #### Important
 
 **"Nested" repos are never permitted**.  Therefore, if you have important code, such as your projects, that belongs in its own repo, **be sure to put that code in folders outside of the class repo**.
+
+mas info:
+https://git.generalassemb.ly/SEI-CC/SEI-CC-4
