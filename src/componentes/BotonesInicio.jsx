@@ -5,8 +5,8 @@ import BotonIncio from './BotonInicio'
 
 const BotonesIncio = (props) => (
   <div> {props.opciones.map(nom => (
-    <BotonIncio nombre={nom} />
-  ))}
+      <BotonIncio nombre={nom} />
+    ))}
   </div>
 );
 

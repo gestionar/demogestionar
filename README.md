@@ -26,8 +26,8 @@ Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medi
 **varios** ejemplos y plantillas.<br />
 
 ### Nombres de variables
-  Métodos
-  Módulos
+ - Métodos
+ - Módulos
 
 componentes: empiezan con mayúscula (fichero y archivo.jsx). Para diferenciarlos de las etiquetas html convencionales. Ejemplo: FilaCliente, BtnNuevoRegistro<br />
 variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos.<br />
@@ -47,9 +47,10 @@ Ver documentación: https://help.github.com/es/github/importing-your-projects-to
 Clonar el repositorio y copiar la url
 
 Abrir una terminal en la carpeta superior al proyecto y escribir:
-´´´
-git clone _URL del repositorio remoto_
-´´´
+```
+git clone _{URL del repositorio remoto}_
+```
+
 esto crea una carpeta con el nombre del repositorio y directorio .git oculto con los datos de configuración del repositorio
 ```
 git remote -v

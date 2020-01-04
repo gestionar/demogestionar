@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
@@ -28,7 +29,130 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs122" />
+     id="defs122">
+    <linearGradient
+       y2="51.6201066982339"
+       x2="-13.530313642382842"
+       y1="46.14115946246456"
+       x1="-13.530293993981939"
+       spreadMethod="pad"
+       gradientTransform="matrix(5.4789472,-0.00327898,0.00200841,8.9450826,8.4653179,-190.79092)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5409">
+      <stop
+         id="stop5401"
+         stop-opacity="0.0"
+         stop-color="#0000ff"
+         offset="0.0" />
+      <stop
+         id="stop5403"
+         stop-color="#0000ff"
+         offset="0.48"
+         style="stop-color:#ddeeff;stop-opacity:1" />
+      <stop
+         id="stop5405"
+         stop-opacity="0.0"
+         stop-color="#0000ff"
+         offset="0.99999994" />
+      <stop
+         id="stop5407"
+         stop-opacity="0.0"
+         stop-color="#ffffff"
+         offset="1.0" />
+    </linearGradient>
+    <linearGradient
+       id="p.7-3"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.116807,-0.04425692,0.00161093,113.10065,-20.830633,-7263.1391)"
+       spreadMethod="pad"
+       x1="-20.575865"
+       y1="62.997723"
+       x2="-20.57588"
+       y2="67.114532">
+      <stop
+         offset="0.0"
+         stop-color="#ffffff"
+         stop-opacity="0.0"
+         id="stop105-6" />
+      <stop
+         offset="0.48"
+         stop-color="#ffffff"
+         id="stop107-7" />
+      <stop
+         offset="1.0"
+         stop-color="#ffffff"
+         stop-opacity="0.0"
+         id="stop109-5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5409"
+       id="linearGradient5161"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.4789472,-0.00761259,0.00200841,20.767207,-11.487628,-750.02928)"
+       x1="-13.530293993981939"
+       y1="46.14115946246456"
+       x2="-13.530313642382842"
+       y2="51.6201066982339"
+       spreadMethod="pad" />
+    <linearGradient
+       id="p.7-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.116807,-0.0086424,0.00161093,22.086052,17.021234,-1239.8281)"
+       spreadMethod="pad"
+       x1="-20.575865"
+       y1="62.997723"
+       x2="-20.57588"
+       y2="67.114532"
+       xlink:href="#p.5-2">
+      <stop
+         offset="0.0"
+         stop-color="#ffffff"
+         stop-opacity="0.0"
+         id="stop105-62"
+         style="stop-opacity:0" />
+      <stop
+         offset="0.48"
+         stop-color="#ffffff"
+         id="stop107-9"
+         style="stop-color:#eedd88;stop-opacity:1" />
+      <stop
+         offset="1.0"
+         stop-color="#ffffff"
+         stop-opacity="0.0"
+         id="stop109-1"
+         style="stop-color:#000000;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       id="p.5-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.4789472,-0.00327898,0.00200841,8.9450826,8.4653179,-190.79092)"
+       spreadMethod="pad"
+       x1="-13.530294"
+       y1="46.141159"
+       x2="-13.530313"
+       y2="51.620106">
+      <stop
+         offset="0.0"
+         stop-color="#0000ff"
+         stop-opacity="0.0"
+         id="stop79-7" />
+      <stop
+         offset="0.48"
+         stop-color="#0000ff"
+         id="stop81-0" />
+      <stop
+         offset="0.99999994"
+         stop-color="#0000ff"
+         stop-opacity="0.0"
+         id="stop83-9" />
+      <stop
+         offset="1.0"
+         stop-color="#ffffff"
+         stop-opacity="0.0"
+         id="stop85-3" />
+    </linearGradient>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -38,16 +162,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1052"
+     inkscape:window-width="1844"
+     inkscape:window-height="993"
      id="namedview120"
      showgrid="false"
-     inkscape:zoom="0.88596791"
-     inkscape:cx="211.2582"
-     inkscape:cy="204.55724"
-     inkscape:window-x="1366"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1.2529478"
+     inkscape:cx="292.62021"
+     inkscape:cy="286.96096"
+     inkscape:window-x="1407"
+     inkscape:window-y="29"
+     inkscape:window-maximized="0"
      inkscape:current-layer="g116" />
   <clipPath
      id="p.0">
@@ -60,30 +184,21 @@
      clip-path="url(#p.0)"
      id="g116">
     <path
-       fill="#000000"
-       fill-opacity="0.0"
-       d="m0 0l730.72705 0l0 532.7507l-730.72705 0z"
-       fill-rule="evenodd"
-       id="path5" />
+       d="M 9.5774139,83.004254 H 740.30446 V 615.75495 H 9.5774139 Z"
+       id="path5"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;fill-opacity:0;fill-rule:evenodd" />
     <path
-       fill="#000000"
-       d="m-34.66637 0l785.54333 0l0 535.37006l-785.54333 0z"
-       fill-rule="evenodd"
-       id="path7" />
-    <path
-       stroke="#000000"
-       stroke-width="1.0"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       d="m-34.66637 0l785.54333 0l0 535.37006l-785.54333 0z"
-       fill-rule="evenodd"
-       id="path9" />
+       d="M -17.107775,-0.79811342 H 768.43556 V 534.57194 H -17.107775 Z"
+       id="path7"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;fill-rule:evenodd" />
     <defs
        id="defs22">
       <linearGradient
          id="p.1"
          gradientUnits="userSpaceOnUse"
-         gradientTransform="matrix(13.587971005192355 0.0 0.0 13.587971005192355 0.0 0.0)"
+         gradientTransform="matrix(13.587971,0,0,13.587971,-3.4836213,-125.98189)"
          spreadMethod="pad"
          x1="-4.587004488432008"
          y1="12.90643711559819"
@@ -111,19 +226,6 @@
            id="stop19" />
       </linearGradient>
     </defs>
-    <path
-       fill="url(#p.1)"
-       d="m-62.328083 175.37534l840.8504 0l0 184.62991l-840.8504 0z"
-       fill-rule="evenodd"
-       id="path24" />
-    <path
-       stroke="#000000"
-       stroke-width="1.0"
-       stroke-linejoin="round"
-       stroke-linecap="butt"
-       d="m-62.328083 175.37534l840.8504 0l0 184.62991l-840.8504 0z"
-       fill-rule="evenodd"
-       id="path26" />
     <defs
        id="defs43">
       <linearGradient
@@ -173,7 +275,7 @@
       <linearGradient
          id="p.3"
          gradientUnits="userSpaceOnUse"
-         gradientTransform="matrix(8.154222315599405 -0.0032289299465624467 0.0032289299465624467 8.154222315599405 0.0 0.0)"
+         gradientTransform="matrix(8.1542223,-0.00322893,0.00322893,8.1542223,-1058.3042,90.985432)"
          spreadMethod="pad"
          x1="-9.736439811368632"
          y1="28.767899681385263"
@@ -200,11 +302,6 @@
            id="stop53" />
       </linearGradient>
     </defs>
-    <path
-       fill="url(#p.3)"
-       d="m-79.27387 234.61444l874.92914 -0.3464508l0 66.488174l-874.92914 0.34646606z"
-       fill-rule="evenodd"
-       id="path58" />
     <defs
        id="defs75">
       <linearGradient
@@ -254,7 +351,7 @@
       <linearGradient
          id="p.5"
          gradientUnits="userSpaceOnUse"
-         gradientTransform="matrix(5.47894723580457 -0.0020084117510480687 0.0020084117510480687 5.47894723580457 0.0 0.0)"
+         gradientTransform="matrix(5.4789472,-0.00327898,0.00200841,8.9450826,8.4653179,-190.79092)"
          spreadMethod="pad"
          x1="-13.530293993981939"
          y1="46.14115946246456"
@@ -281,31 +378,28 @@
            id="stop85" />
       </linearGradient>
     </defs>
-    <path
-       fill="url(#p.5)"
-       d="m-74.02809 252.83527l859.2126 -0.31495667l0 30.015732l-859.2126 0.31497192z"
-       fill-rule="evenodd"
-       id="path90" />
     <defs
        id="defs101">
       <linearGradient
          id="p.6"
          gradientUnits="userSpaceOnUse"
-         gradientTransform="matrix(5.526625986262282 0.0 0.0 5.526625986262282 0.0 0.0)"
+         gradientTransform="matrix(5.526626,0,0,18.791988,62.971093,-554.199)"
          spreadMethod="pad"
-         x1="-34.271209764397874"
-         y1="45.65295356838871"
-         x2="-34.2723339748233"
-         y2="51.17957944030916">
+         x1="-34.271217"
+         y1="45.691471"
+         x2="-34.271217"
+         y2="51.179581">
         <stop
            offset="0.0"
            stop-color="#93ffcb"
            stop-opacity="0.0"
-           id="stop92" />
+           id="stop92"
+           style="stop-color:#000000;stop-opacity:0" />
         <stop
-           offset="0.51"
+           offset="0.47130617"
            stop-color="#93ffcb"
-           id="stop94" />
+           id="stop94"
+           style="stop-color:#88ffcc;stop-opacity:1" />
         <stop
            offset="0.99999994"
            stop-color="#93ffcb"
@@ -315,25 +409,27 @@
            offset="1.0"
            stop-color="#ffffff"
            stop-opacity="0.0"
-           id="stop98" />
+           id="stop98"
+           style="stop-color:#000000;stop-opacity:0" />
       </linearGradient>
     </defs>
     <path
-       fill="url(#p.6)"
-       d="m-189.4042 252.51968l1045.3544 0l0 30.330719l-1045.3544 0z"
-       fill-rule="evenodd"
-       id="path103" />
+       d="m -85.515718,208.3085 859.212598,-1.1938 v 113.77057 l -859.212598,1.19384 z"
+       id="path90"
+       style="fill:url(#linearGradient5161);fill-rule:evenodd;stroke-width:1.94688582"
+       inkscape:connector-curvature="0" />
     <defs
        id="defs112">
       <linearGradient
          id="p.7"
          gradientUnits="userSpaceOnUse"
-         gradientTransform="matrix(4.116807005006837 -0.0016109308388082533 0.0016109308388082533 4.116807005006837 0.0 0.0)"
+         gradientTransform="matrix(4.116807,-0.00709619,0.00161093,18.134641,28.361543,-970.6987)"
          spreadMethod="pad"
-         x1="-20.575865165922863"
-         y1="62.997724036750576"
-         x2="-20.575880108509008"
-         y2="67.11453104173029">
+         x1="-20.575865"
+         y1="62.997723"
+         x2="-20.57588"
+         y2="67.114532"
+         xlink:href="#p.5">
         <stop
            offset="0.0"
            stop-color="#ffffff"
@@ -350,10 +446,5 @@
            id="stop109" />
       </linearGradient>
     </defs>
-    <path
-       fill="url(#p.7)"
-       d="m-84.59875 259.38583l885.3858 -0.34646606l0 16.944885l-885.3858 0.34646606z"
-       fill-rule="evenodd"
-       id="path114" />
   </g>
 </svg>

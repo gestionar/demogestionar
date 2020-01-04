@@ -15,7 +15,10 @@ const InicioPag = () => {
           - Detallar el plan a largo plazo, el propósito y la visión del proyecto general<br />
         </p>
         <section>
-          Página de testeo de código
+          <div style={{"backgroundColor": "#fed"}}>
+            <a href="https://github.com/gestionar/demogestionar/blob/master/README.md">Instrucciones del repositorio</a>
+          </div>
+
           <hr />
         </section>
         <code style={{"color": "#888"}}>
