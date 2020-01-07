@@ -6,7 +6,7 @@ const InicioPag = () => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
-        <h1>Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas</h1>
+        <h1 style={{"color": "var(--verdefluo)", "backgroundColor": "var(--lilaoscuro)"}}>Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas</h1>
         <h4>
           Objetivos
         </h4>
@@ -15,13 +15,13 @@ const InicioPag = () => {
           - Detallar el plan a largo plazo, el propósito y la visión del proyecto general<br />
         </p>
         <section>
-          <div style={{"backgroundColor": "#fed"}}>
+          <div style={{"backgroundColor": "var(--mostaza)"}}>
             <a href="https://github.com/gestionar/demogestionar/blob/master/README.md">Instrucciones del repositorio</a>
           </div>
-
+          <p>Las props van a venir del componente de más alto nivel "App". Ver como referenciar secciones de la página usando Routes</p>
           <hr />
         </section>
-        <code style={{"color": "#888"}}>
+        <code style={{"color": "var(--naranja)", "backgroundColor": "var(--grisoscuro)"}}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis laboriosam a
           neque. Beatae culpa minima quisquam! Voluptates totam autem cupiditate natus temporibus
           perspiciatis nemo earum. Voluptatum nam tempora asperiores numquam.
@@ -34,7 +34,7 @@ const InicioPag = () => {
       <div className="Inicio-indice">
         <h3>Índice</h3>
         <BotonesIncio opciones={["Introducción", "Objetivos", "Plan"]}/>
-        <p>Las props van a venir del componente de más alto nivel "App". Ver como referenciar secciones de la página usando Routes</p>
+        
       </div>
       <div className="Inicio-pie">
         <p>Anterior</p><p>Pie de página</p><p>Siguiente</p>

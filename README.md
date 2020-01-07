@@ -48,7 +48,7 @@ Clonar el repositorio y copiar la url
 
 Abrir una terminal en la carpeta superior al proyecto y escribir:
 ```
-git clone _{URL del repositorio remoto}_
+git clone `URL del repositorio remoto`
 ```
 
 esto crea una carpeta con el nombre del repositorio y directorio .git oculto con los datos de configuración del repositorio

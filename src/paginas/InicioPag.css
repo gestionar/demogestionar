@@ -8,7 +8,7 @@
 
 .Inicio-indice {
     grid-area: idx;
-    background-color: #edf;
+    background-color: var(--gris);
     padding: 10px;
     text-align: left;
 }
@@ -21,7 +21,8 @@
     grid-area: pie;
     display: flex;
     justify-content: space-evenly;
-    background-color: #ddd;
+    color: var(--amarillo);
+    background-color: var(--grisoscuro);
 }
 
 @media (max-width: 600px) {

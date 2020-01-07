@@ -6,7 +6,7 @@
 .App-header {
   padding: 5px;
   font-size: 25px;
-  background-color: #eef;
+  background-color: var(--lila);
 }
 .App-logo {
   float: left;
@@ -20,25 +20,26 @@
   text-decoration: none;
 }
 .App-logo a:hover {
-  background-color: #eff;
+  background-color: var(--rosapiel);
 }
 .App-menu {
   float: right;
   margin: 5px;
+  
 }
 .btn-menu {
-  background-color: #eee;
-  color: #000;
+  background-color: var(--celestito);
+  color: var(--grisoscuro);
   text-align: center;
   padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
   line-height: 25px;
-  border-radius: 4px;
+  text-decoration: none;
+  font-size: 24px; 
+
   margin: 2px;
 }
 .btn-menu:hover {
-  background-color: #eff;
+  background-color: var(--verdeagua);
 }
 
 .App-cuerpo {

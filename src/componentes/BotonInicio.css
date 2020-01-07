@@ -1,8 +1,8 @@
 .BotonInicio {
-    background-color: #dff;
+    background-color: var(--grisclaro);
     font-size: 20px;
     padding: 5px;
     margin: 5px;
     cursor: pointer;
-    width: 110%;
+    width: 100%;
 }

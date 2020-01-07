@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
+import logo from './luzInfo.svg';
 import InicioPag from './paginas/InicioPag';
 import ContactosPag from './paginas/ContactosPag';
-import logo from './luzInfo.svg';
+import ConfigPag from './paginas/ConfigPag';
 
 class App extends Component {
   constructor () {
@@ -30,6 +31,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/inicio' render={() => <InicioPag />} />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
+            <Route exact path='/configuracion' render={() => <ConfigPag/>} />
           </Switch>
         </div>
       </div>
