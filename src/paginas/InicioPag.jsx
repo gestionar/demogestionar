@@ -2,26 +2,29 @@ import React from 'react';
 import './InicioPag.css';
 import BotonesIncio from '../componentes/BotonesInicio'
 
-const InicioPag = () => {
+const InicioPag = (props) => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
-        <h1 style={{"color": "var(--verdefluo)", "backgroundColor": "var(--lilaoscuro)"}}>Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas</h1>
+        <h1 style={{"color": "var(--verdefluo)"}}>
+          Muestra del proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
+        </h1>
         <h4>
           Objetivos
         </h4>
-        <p>- Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores<br />
+        <p>- Crear un front de muestra de la herramienta web para conseguir clientes, colaboradores e inversores<br />
           - Implementar normas de estandarización que faciliten el desarrollo en equipo<br />
           - Detallar el plan a largo plazo, el propósito y la visión del proyecto general<br />
         </p>
         <section>
-          <div style={{"backgroundColor": "var(--mostaza)"}}>
+          <div style={{"color": "var(--mostaza)",
+            "backgroundImage": "linear-gradient(#eef, #eff)"}}>
             <a href="https://github.com/gestionar/demogestionar/blob/master/README.md">Instrucciones del repositorio</a>
           </div>
           <p>Las props van a venir del componente de más alto nivel "App". Ver como referenciar secciones de la página usando Routes</p>
           <hr />
         </section>
-        <code style={{"color": "var(--naranja)", "backgroundColor": "var(--grisoscuro)"}}>
+        <code style={{"color": "var(--naranja)"}}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis laboriosam a
           neque. Beatae culpa minima quisquam! Voluptates totam autem cupiditate natus temporibus
           perspiciatis nemo earum. Voluptatum nam tempora asperiores numquam.
@@ -32,8 +35,8 @@ const InicioPag = () => {
       </div>
 
       <div className="Inicio-indice">
-        <h3>Índice</h3>
-        <BotonesIncio opciones={["Introducción", "Objetivos", "Plan"]}/>
+        <h3 style={{"color": "var(--lila)"}}>Índice</h3>
+        <BotonesIncio opciones={props.menuInicio}/>
         
       </div>
       <div className="Inicio-pie">

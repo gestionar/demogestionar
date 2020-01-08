@@ -25,7 +25,7 @@ Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medi
 **utilies** herramientas de formateo y validación de uso compartido.<br />
 **varios** ejemplos y plantillas.<br />
 
-### Nombres de variables
+### Convenciones de nombrado
  - Métodos
  - Módulos
 
