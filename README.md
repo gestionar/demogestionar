@@ -1,5 +1,4 @@
-Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas.
-
+Proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
 ## Objetivos
  - Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
  - Implementar normas de estandarización que faciliten el desarrollo en equipo
@@ -40,7 +39,7 @@ Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
 
 
-## Machete de comandos git para inicar la colaborción remota, editar el proyecto y desplegar páginas
+## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
 
 Ver documentación: https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
 
