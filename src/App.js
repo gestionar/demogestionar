@@ -14,12 +14,44 @@ class App extends Component {
     super ();
     this.state = {
       menuApp: ["Inicio", "contactos", "cuentas", "reportes", "configuración"],
+      testear:
+      {
+        Incio: ["Inicio", "Contactos", "etc"], 
+        Contactos: ["Buscar", "Nuevo", "Filtrar"]
+      },
       menuInicio: ["Introducción", "Objetivos", "Plan"],
-
       menuContactos: ["Buscar", "Agregar"],
-      
-      otroArr: ["submenu", 5, true, {test: "subobjeto", hijo: "como"}]
-      
+      colores: 
+      [
+        "amarillo",
+        "amarilloclaro",
+        "azul",
+        "bordo",
+        "celeste",
+        "celestito",
+        "cian",
+        "grisclaro",
+        "gris",
+        "grisoscuro",
+        "lila",
+        "lilaoscuro",
+        "magenta",
+        "mostaza",
+        "naranja",
+        "rojo",
+        "rosa",
+        "rosaoscuro",
+        "rosapiel",
+        "uva",
+        "verde",
+        "verdefluo",
+        "verdeagua", 
+        "verdeazul",
+        "verdeclaro",
+        "verdeoscuro",
+        "violeta",
+        "test"
+      ]      
     }
   }
   render () {
