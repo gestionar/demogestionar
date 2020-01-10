@@ -1,13 +1,14 @@
 import React from 'react';
 import './InicioPag.css';
 import BotonesIncio from '../componentes/BotonesInicio'
+import Articulos from '../componentes/Articulos';
 
 const InicioPag = (props) => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
         <h1 style={{"color": "var(--test)"}}>
-          Muestra del proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
+          Proyecto de desarrollo de herramientas web para la asistencia en la gestión de recursos empresariales
         </h1>
         <h4>
           Objetivos
@@ -21,7 +22,7 @@ const InicioPag = (props) => {
             "backgroundImage": "linear-gradient(#eef, #eff)"}}>
             <a href="https://github.com/gestionar/demogestionar/blob/master/README.md">Instrucciones del repositorio</a>
           </div>
-          <p>Las props van a venir del componente de más alto nivel "App". Ver como referenciar secciones de la página usando Routes</p>
+            <Articulos articulos={props.articulos}/>
           <hr />
         </section>
         <code style={{"color": "var(--naranja)"}}>
@@ -37,6 +38,7 @@ const InicioPag = (props) => {
       <div className="Inicio-indice">
         <h3 style={{"color": "var(--grisoscuro)"}}>Índice</h3>
         <BotonesIncio opciones={props.menuInicio}/>
+        <Articulos articulos={props.articulos}/>
       </div>
       
       <div className="Inicio-pie">

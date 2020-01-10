@@ -14,6 +14,7 @@ class App extends Component {
     super ();
     this.state = {
       menuApp: ["Inicio", "contactos", "cuentas", "reportes", "configuración"],
+      articulos:["Introducción", "Objetivos", "Plan de negocio"],
       testear:
       {
         Incio: ["Introducción", "Objetivos", "Plan de negocio"], 
@@ -86,7 +87,7 @@ class App extends Component {
         </header>
         <div className="App-cuerpo">
           <Switch>
-            <Route exact path='/inicio' render={() => <InicioPag menuInicio={this.state.menuInicio}/>} />
+            <Route exact path='/inicio' render={() => <InicioPag menuInicio={this.state.menuInicio} articulos={this.state.articulos}/>} />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
             <Route exact path='/configuracion' render={() => <ConfigPag colores={this.state.colores}/>} />
           </Switch>

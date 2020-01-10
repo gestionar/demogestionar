@@ -4,8 +4,6 @@
 }
 
 .App-header {
-  position:fixed;
-  width: 100%;
   padding: 2px;
   font-size: 18px;
   background-image: linear-gradient(var(--lila), var(--violeta))
@@ -35,7 +33,6 @@
   background-color: var(--rosa);
   color: var(--grisoscuro);
   text-align: justify;
-
   padding: 6px;
   text-decoration: none;
   font-size: 20px; 
@@ -46,14 +43,12 @@
 }
 
 .App-cuerpo {
-  margin-top: 40px;
   text-align: center;
 }
 
 /* Responsive layout */
 @media (max-width: 600px) {
   .App-header {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
