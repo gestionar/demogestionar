@@ -6,7 +6,7 @@ const InicioPag = (props) => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
-        <h1 style={{"color": "var(--verdefluo)"}}>
+        <h1 style={{"color": "var(--test)"}}>
           Muestra del proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
         </h1>
         <h4>
@@ -35,10 +35,10 @@ const InicioPag = (props) => {
       </div>
 
       <div className="Inicio-indice">
-        <h3 style={{"color": "var(--lila)"}}>Índice</h3>
+        <h3 style={{"color": "var(--grisoscuro)"}}>Índice</h3>
         <BotonesIncio opciones={props.menuInicio}/>
-        
       </div>
+      
       <div className="Inicio-pie">
         <p>Anterior</p><p>Pie de página</p><p>Siguiente</p>
       </div>  

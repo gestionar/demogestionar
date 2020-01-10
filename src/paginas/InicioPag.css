@@ -8,7 +8,7 @@
 
 .Inicio-indice {
     grid-area: idx;
-    background-image: linear-gradient(to left, var(--grisoscuro), #000);
+    background-image: linear-gradient(to left, var(--verdeclaro), var(--verde));
     padding: 10px;
     text-align: left;
 }

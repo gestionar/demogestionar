@@ -16,7 +16,7 @@ class App extends Component {
       menuApp: ["Inicio", "contactos", "cuentas", "reportes", "configuración"],
       testear:
       {
-        Incio: ["Inicio", "Contactos", "etc"], 
+        Incio: ["Introducción", "Objetivos", "Plan de negocio"], 
         Contactos: ["Buscar", "Nuevo", "Filtrar"]
       },
       menuInicio: ["Introducción", "Objetivos", "Plan"],
@@ -28,7 +28,7 @@ class App extends Component {
         "azul",
         "bordo",
         "celeste",
-        "celestito",
+        "celesteclaro",
         "cian",
         "grisclaro",
         "gris",
@@ -40,11 +40,11 @@ class App extends Component {
         "naranja",
         "rojo",
         "rosa",
+        "rosaclaro",
         "rosaoscuro",
-        "rosapiel",
         "uva",
         "verde",
-        "verdefluo",
+        "verdefluor",
         "verdeagua", 
         "verdeazul",
         "verdeclaro",
@@ -88,7 +88,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/inicio' render={() => <InicioPag menuInicio={this.state.menuInicio}/>} />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
-            <Route exact path='/configuracion' render={() => <ConfigPag/>} />
+            <Route exact path='/configuracion' render={() => <ConfigPag colores={this.state.colores}/>} />
           </Switch>
         </div>
       </div>
