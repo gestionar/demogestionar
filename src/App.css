@@ -6,7 +6,7 @@
 .App-header {
   padding: 2px;
   font-size: 18px;
-  background-image: linear-gradient(var(--lila), var(--violeta))
+  background-image: linear-gradient(var(--verde3), var(--verde3))
 }
 .App-logo {
   display: flex;
@@ -16,7 +16,7 @@
 
 .App-logo a {
   font-size: 18px;
-  color: rgb(42, 235, 193);
+  color:var(--negro1);
   padding: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -30,8 +30,8 @@
   
 }
 .btn-menu {
-  background-color: rgb(171, 217, 4, 1);
-  color: rgb(255, 250, 250);
+  background-color: var(--verde3);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -45,7 +45,7 @@
 
 .App-cuerpo {
   text-align: center;
-  color: rgb(110, 140, 3, 1);
+  color:var(--verde3);
 }
 
 /* Responsive layout */

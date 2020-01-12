@@ -7,7 +7,7 @@ const InicioPag = (props) => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
-        <h1 style={{"color": "var(--test)"}}>
+        <h1 style={{"color": "var(--verde2)"}}>
           Proyecto de desarrollo de herramientas web para la asistencia en la gestión de recursos empresariales
         </h1>
         <h4>
@@ -18,14 +18,14 @@ const InicioPag = (props) => {
           - Detallar el plan a largo plazo, el propósito y la visión del proyecto general<br />
         </p>
         <section>
-          <div style={{"color": "var(--mostaza)",
-            "backgroundImage": "linear-gradient(#eef, #eff)"}}>
+          <div style={{"color": "var(--gris)",
+            "backgroundImage": "linear-gradient(var(--verde3), rgb(255, 255, 255)"}}>
             <a href="https://github.com/gestionar/demogestionar/blob/master/README.md">Instrucciones del repositorio</a>
           </div>
             <Articulos articulos={props.articulos}/>
           <hr />
         </section>
-        <code style={{"color": "var(--naranja)"}}>
+        <code style={{"color": "var(--negro1)"}}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis laboriosam a
           neque. Beatae culpa minima quisquam! Voluptates totam autem cupiditate natus temporibus
           perspiciatis nemo earum. Voluptatum nam tempora asperiores numquam.
