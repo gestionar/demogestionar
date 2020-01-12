@@ -1,31 +1,31 @@
 import React from 'react';
 import './InicioPag.css';
+import BotonesIncio from '../componentes/BotonesInicio'
+import Articulos from '../componentes/Articulos';
 
-const InicioPag = () => {
+const InicioPag = (props) => {
   return (
     <div className="Inicio-grid">
       <div className="Inicio-detalle">
-        <h1>Funciones básicas y atajos de teclado</h1>
+        <h1 style={{"color": "var(--test)"}}>
+          Proyecto de desarrollo de herramientas web para la asistencia en la gestión de recursos empresariales
+        </h1>
         <h4>
-          Para una mejor experiencia habilite la pantalla completa con la tecla F11.
+          Objetivos
         </h4>
-        <p>
-          Descripción incial o bienvenida con tips y demostraciones del funcionamiento básico
-          de la aplicación, podría estár acá también un buscador de contenido general que
-          permita acceder a lugares frecuentes de trabajo.
+        <p>- Crear un front de muestra de la herramienta web para conseguir clientes, colaboradores e inversores<br />
+          - Implementar normas de estandarización que faciliten el desarrollo en equipo<br />
+          - Detallar el plan a largo plazo, el propósito y la visión del proyecto general<br />
         </p>
         <section>
-          Pensaba en utilizar esta sección como ayuda de notas y bocetos de lo que va a ir pasando
-          con el proyecto y todo esto también es una forma de llenar la página de texto cuyo
-          único propósito es desplegar algo que sirva de relleno para tener una idea de como 
-          a ir siendo mostrada la información, como un:
-
-          pero casero.
-          <hr />
-            <var>eee</var>
+          <div style={{"color": "var(--mostaza)",
+            "backgroundImage": "linear-gradient(#eef, #eff)"}}>
+            <a href="https://github.com/gestionar/demogestionar/blob/master/README.md">Instrucciones del repositorio</a>
+          </div>
+            <Articulos articulos={props.articulos}/>
           <hr />
         </section>
-        <code style={{"color": "#888"}}>
+        <code style={{"color": "var(--naranja)"}}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis laboriosam a
           neque. Beatae culpa minima quisquam! Voluptates totam autem cupiditate natus temporibus
           perspiciatis nemo earum. Voluptatum nam tempora asperiores numquam.
@@ -36,11 +36,13 @@ const InicioPag = () => {
       </div>
 
       <div className="Inicio-indice">
-          <h3>Índice</h3>
-          <p>Sección 1<hr />Sección 2<hr />Sección 3<hr />Sección y así<hr /></p>
+        <h3 style={{"color": "var(--grisoscuro)"}}>Índice</h3>
+        <BotonesIncio opciones={props.menuInicio}/>
+        <Articulos articulos={props.articulos}/>
       </div>
+      
       <div className="Inicio-pie">
-          <p>Anterior</p><p>Pie de página</p><p>Siguiente</p>
+        <p>Anterior</p><p>Pie de página</p><p>Siguiente</p>
       </div>  
     </div>
   );

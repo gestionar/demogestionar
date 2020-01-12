@@ -8,7 +8,11 @@
 
 .Inicio-indice {
     grid-area: idx;
+<<<<<<< HEAD
     background-color: rgb(242, 242, 242, 1));
+=======
+    background-image: linear-gradient(to left, var(--verdeagua), var(--lila));
+>>>>>>> b7e7196938631d6f722bb11105b885d379429b54
     padding: 10px;
     text-align: left;
 }
@@ -21,7 +25,12 @@
     grid-area: pie;
     display: flex;
     justify-content: space-evenly;
+<<<<<<< HEAD
     background-color: rgb(13, 13, 13, 1);
+=======
+    color: var(--amarillo);
+    background-color: var(--grisoscuro);
+>>>>>>> b7e7196938631d6f722bb11105b885d379429b54
 }
 
 @media (max-width: 600px) {

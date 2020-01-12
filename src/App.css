@@ -4,14 +4,17 @@
 }
 
 .App-header {
-  padding: 5px;
-  font-size: 25px;
+  padding: 2px;
+  font-size: 18px;
+  background-image: linear-gradient(var(--lila), var(--violeta))
 }
 .App-logo {
+  display: flex;
+  flex-direction: row;
   float: left;
 }
+
 .App-logo a {
-  height: 20px;
   font-size: 18px;
   color: rgb(42, 235, 193);
   padding: 20px;
@@ -19,11 +22,12 @@
   text-decoration: none;
 }
 .App-logo a:hover {
-  background-color: #eff;
+  background-color: var(--rosapiel);
 }
 .App-menu {
   float: right;
   margin: 5px;
+  
 }
 .btn-menu {
   background-color: rgb(171, 217, 4, 1);
@@ -31,10 +35,8 @@
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-  margin: 2px;
+  font-size: 20px; 
+  margin: 4px;
 }
 .btn-menu:hover {
   background-color: rgb(169, 191, 4, 1);
@@ -46,11 +48,9 @@
   color: rgb(110, 140, 3, 1);
 }
 
-
 /* Responsive layout */
 @media (max-width: 600px) {
   .App-header {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;

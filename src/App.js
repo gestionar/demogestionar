@@ -1,35 +1,95 @@
 import React, {Component} from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
+import logo from './luzInfo.svg';
 import InicioPag from './paginas/InicioPag';
 import ContactosPag from './paginas/ContactosPag';
-import logo from './luzInfo.svg';
+import ConfigPag from './paginas/ConfigPag';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar, faCheckSquare, faUser, faCog, faHome, faChartPie } from '@fortawesome/free-solid-svg-icons'
 
 class App extends Component {
   constructor () {
     super ();
-    this.state = {menu: ["Inicio", "contactos", "cuentas", "configuración"]}
+    this.state = {
+      menuApp: ["Inicio", "contactos", "cuentas", "reportes", "configuración"],
+      articulos:["Introducción", "Objetivos", "Plan de negocio"],
+      testear:
+      {
+        Incio: ["Introducción", "Objetivos", "Plan de negocio"], 
+        Contactos: ["Buscar", "Nuevo", "Filtrar"]
+      },
+      menuInicio: ["Introducción", "Objetivos", "Plan"],
+      menuContactos: ["Buscar", "Agregar"],
+      colores: 
+      [
+        "amarillo",
+        "amarilloclaro",
+        "azul",
+        "bordo",
+        "celeste",
+        "celesteclaro",
+        "cian",
+        "grisclaro",
+        "gris",
+        "grisoscuro",
+        "lila",
+        "lilaoscuro",
+        "magenta",
+        "mostaza",
+        "naranja",
+        "rojo",
+        "rosa",
+        "rosaclaro",
+        "rosaoscuro",
+        "uva",
+        "verde",
+        "verdefluor",
+        "verdeagua", 
+        "verdeazul",
+        "verdeclaro",
+        "verdeoscuro",
+        "violeta",
+        "test"
+      ]      
+    }
   }
   render () {
-    return (      
+    return (
       <div className="App">
         <header className="App-header">
           <div className="App-logo">
-          <a href="http://gestionar.github.io/demogestionar">
-            <img src={logo} alt="logo"></img>
-          </a>
+            <a href="http://gestionar.github.io/demogestionar">
+              <img src={logo} alt="logo" style={{width: 30}}></img>
+              &nbsp;Gestion-R&nbsp;
+              <FontAwesomeIcon icon={faChartBar} />
+            </a>
           </div>
           <div className="App-menu">
-            <Link className="btn-menu" to='/inicio'>Incio</Link>        
-            <Link className="btn-menu" to='/contactos'>Contactos</Link>
-            <Link className="btn-menu" to='/cuentas'>Cuentas</Link>
-            <Link className="btn-menu" to='/configuracion'>Configuración</Link>
+            
+            <Link className="btn-menu" to='/inicio'>
+              <FontAwesomeIcon icon={faHome} />&nbsp;Incio
+            </Link>        
+            <Link className="btn-menu" to='/contactos'>
+              <FontAwesomeIcon icon={faUser} />&nbsp;Contactos
+            </Link>
+            <Link className="btn-menu" to='/cuentas'>
+              <FontAwesomeIcon icon={faCheckSquare} />&nbsp;Cuentas
+            </Link>
+            <Link className="btn-menu" to='/reportes'>
+              <FontAwesomeIcon icon={faChartPie} />&nbsp;Reportes
+            </Link>
+            <Link className="btn-menu" to='/configuracion'>
+              <FontAwesomeIcon icon={faCog} />&nbsp;Configuración
+            </Link>
           </div>
         </header>
         <div className="App-cuerpo">
           <Switch>
-            <Route exact path='/inicio' render={() => <InicioPag />}/> 
+            <Route exact path='/inicio' render={() => <InicioPag menuInicio={this.state.menuInicio} articulos={this.state.articulos}/>} />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
+            <Route exact path='/configuracion' render={() => <ConfigPag colores={this.state.colores}/>} />
           </Switch>
         </div>
       </div>

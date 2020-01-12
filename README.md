@@ -1,99 +1,171 @@
-Proyecto de desarrollo web para la asistencia en la gestión de pequeñas y medianas empresas.
+Proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
+## Objetivos
+ - Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
+ - Implementar normas de estandarización que faciliten el desarrollo en equipo
+ - Detallar el plan a largo plazo, el propósito y la visión del proyecto general
 
 ## BPP (Buenas Prácticas de Programación)
 
-### Árbol de ficheros de src
+### Árbol de carpetas del codigo fuente
 
- * paginas
- * componentes
- * servicios
- * modelos (provisoria con datos que devolverá la api en el back)
- * utiles
- * varios
-  
-La carpeta **servicios** tiene las llamadas AJAX a la api del back, todos los módulos de comunicación a la API se encuentran en esta carpeta
+```
+/src
+  /paginas
+  /componentes
+  /servicios
+  /modelos
+  /utiles
+  /varios
+```
+**paginas** contiene las vistas de cada sección del menú: Contactos, Cuentas, Informes, Configuración, etc.<br />
+**componentes** almacena los distintos componentes que son llamados para completar las páginas.<br />
+**servicios** tiene las llamadas AJAX a la api del back, o sea que todos los módulos de comunicación a la API se encuentran en esta carpeta.<br />
+**modelos** es provisoria y emula los resultados devueltos por la api del back, conteniendo arreglos y objetos json.<br />
+**utilies** herramientas de formateo y validación de uso compartido.<br />
+**varios** ejemplos y plantillas.<br />
 
-### Nombres de variables
-  Métodos
-  Módulos
+### Convenciones de nombrado
+ - Métodos
+ - Módulos
 
-componentes: empiezan con mayúscula (fichero y archivo.jsx)
-variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos, ej. atiendeClik,
+componentes: empiezan con mayúscula (fichero y archivo.jsx). Para diferenciarlos de las etiquetas html convencionales. Ejemplo: FilaCliente, BtnNuevoRegistro<br />
+variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos.<br />
+Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
  - [ ] ES6 funciones flecha, let y const
  - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
+ 
+ 
 
 
 
+## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
 
-## Machete de comandos git para inicar la colaborción remota, editar el proyecto y desplegar páginas
+Ver documentación: https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+
+Clonar el repositorio y copiar la url
+
+Abrir una terminal en la carpeta superior al proyecto y escribir:
+```
+git clone `URL del repositorio remoto`
+```
+
+esto crea una carpeta con el nombre del repositorio y directorio .git oculto con los datos de configuración del repositorio
+```
+git remote -v
+```
+te muestra la dirección de github del repo que acabas de crear<br />
+
+crear un vínculo con el repo para actualizar el local (si el dueño original es otro, primero hay que hacer un fork, después copiar el url del repo en nuestro perfil)
+
+git remote add upstream (url de repo original en github)
+
+para actualizar desde el original
+
+git pull origin master
+
+luego de la edisión del proyecto para agregar los cambios:
+
+git add .
+
+git commit -m _texto descriptivo de los cambios_
+
+git push origin master
+
+Para desplegar a gh-pages:
+
+https://github.com/gitname/react-gh-pages/blob/master/README.md
+
+```
+$ npm run deploy
+```
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Cloning Your Copy of the Repository Locally
 
-## Available Scripts
+Now that you have a copy of the class repo in your GitHub account, it's time to bring the contents of that repo onto your computer - this process is known as **cloning** and it only needs to be done once:
 
-In the project directory, you can run:
+1. On your Enterprise GitHub account, browse to your fork of the GitHub class repo and under the repository name click `Clone or download`
+2. In the `Clone with HTTPS` section, click the clipboard to copy the URL for the repository.
+3. Open Terminal and navigate to your `~/code` folder - you may choose a different folder if you wish, however these instructions will assume you clone the repo into a folder named `code`.
+4. In Terminal, type `git clone ` and follow it by pasting in the copied URL from the clipboard. The command should now look something like this:
 
-### `npm start`
+```
+$ git clone https://git.generalassemb.ly/YOUR-ENTERPRISE-GITHUB-USERNAME/SEI-CC/SEI-CC-4
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can now `$ cd SEI-CC-4` and check out your local copy of of the GA class repo!
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Adding a git _remote_ for the original GA class repo
 
-### `npm test`
+A repo on your computer is called a **local repo** ("repo" is short for repository).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Repos on GitHub are called **remote** repos. Think of them as repos in the cloud.
 
-### `npm run build`
+When you cloned your fork of the repo, a "link" to the git **remote** was automatically created. You can check which remotes exist for a given local repo using this command:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ git remote -v
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Note that by convention, the remote that points to the GitHub repo it was cloned from is named **origin**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+However, in order to get the updates that the instructors push to the GA class repo, you will need to create another **remote** that points to GA's class repo that you forked:
 
-### `npm run eject`
+```
+$ git remote add upstream https://git.generalassemb.ly/SEI-CC/SEI-CC-4.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Note that by convention, the remote that points to the *original* GitHub repo that was forked is named **upstream**.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Entering `$ git remote -v` again will show that you now have two remotes: `origin` (your fork of GA's class repo) and `upstream` (GA's class repo).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Getting Changes Pushed by Your Instructors
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Each day (maybe a few times a day), instructional materials may be pushed to the class repo by your instructors. You will want to "pull" these materials into your local repo (on your computer). Doing so will enable you to access "starter code", etc.
 
-## Learn More
+First, if you've made any changes **within** the repo locally, i.e., you've modified some starter code, you will need to **commit** those changes first:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$ git add -A
+$ git commit -m "Add amazing work..."
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+With local changes committed, you can now fetch the updates from the Github class repo and merge them into your **local** repo (on your computer):
 
-### Code Splitting
+```
+$ git pull upstream master
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+From time to time, you will want to "save" the commits you have made locally to your forked GitHub class repo (in the cloud). Doing so is a good idea to ensure your work is backed up to the cloud in case of computer failure:
 
-### Analyzing the Bundle Size
+```
+$ git push origin master
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+The above Git/GitHub workflow is summarized by this diagram:
 
-### Making a Progressive Web App
+<img src="https://i.imgur.com/w871ATo.png">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Handling Merge Conflicts
 
-### Advanced Configuration
+A **merge conflict** occurs when git merges two commits that have modified the same region of code and can't figure out whose code to use. Thus, fixing merge conflicts requires that a developer manually update the code to what it should be and re-commit it to resolve the conflict, which will also finish git's merge process.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Git informs you which files have merge conflicts and will *annotate* your code to show you how your local code differs from the code being merged from the remote. An example of such annotation is below.
 
-### Deployment
+```
+<<<<<<< HEAD
+// Local code is here 
+=======
+// Changes you are pulling are here
+>>>>>>> 75c37cea922afc56e7d686adba063b986013ca9f
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Once you have resolved these merge conflicts by editing the code and removing the markers, you can `add` and `commit` normally.
 
-### `npm run build` fails to minify
+#### Important
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**"Nested" repos are never permitted**.  Therefore, if you have important code, such as your projects, that belongs in its own repo, **be sure to put that code in folders outside of the class repo**.
+
+mas info:
+https://git.generalassemb.ly/SEI-CC/SEI-CC-4
