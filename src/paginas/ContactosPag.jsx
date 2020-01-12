@@ -6,6 +6,7 @@ const ContactosPag = () => {
           acá se mostraría el índice de contactos y una
           lista de comandos asociados a ellos (ver, vender, cuenta, etc)
 
+
       </div>
     );
   
