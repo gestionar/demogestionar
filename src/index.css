@@ -11,14 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/*08f
+  48c*/
 :root {
   --amarillo: #cc4;
-  --amarilloclaro: #cc8;
+  --amarilloclaro: #ff8;
   --azul: #44c;
   --bordo: #844;
-  --celeste: #48c;
-  --celesteclaro: #8cc;
+  --celeste: #08f;
+  --celesteclaro: #8ff;
   --cian: #4cc;
   --grisclaro: #ccc;
   --gris: #888;
@@ -26,19 +27,19 @@ code {
   --lila: #88c;
   --lilaoscuro: #448;
   --magenta: #c4c;
-  --mostaza: #884;
-  --naranja: #c84;
+  --mostaza: #880;
+  --naranja: #f80;
   --rojo: #c44;
   --rosa: #c8c;
-  --rosaclaro: #c88;
+  --rosaclaro: #f88;
   --rosaoscuro: #c48;
   --uva: #848;
   --verde: #4c4;
-  --verdefluor: #8c4;
+  --verdefluor: #8f0;
   --verdeagua: #4c8; 
-  --verdeazul: #488;
-  --verdeclaro: #8c8;
-  --verdeoscuro: #484;
+  --verdeazul: #088;
+  --verdeclaro: #8f8;
+  --verdeoscuro: #080;
   --violeta: #84c;
   --verde1: #ABD904;
   --verde2: #6E8C03;
@@ -47,4 +48,5 @@ code {
   --negro1:#0D0D0D;
   --amarillo1:#FFFC99;
   --test: rgba(222, 88, 44, 0.6);
+  --test2: rgba(171, 196, 4, 0.9);
 }

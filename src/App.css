@@ -6,7 +6,7 @@
 .App-header {
   padding: 2px;
   font-size: 18px;
-  background-image: linear-gradient(var(--verde3), var(--verde3))
+  text-align: center;
 }
 .App-logo {
   display: flex;
@@ -22,30 +22,25 @@
   text-decoration: none;
 }
 .App-logo a:hover {
-  background-color: var(--rosapiel);
+  background-color: var(--cian);
 }
 .App-menu {
   float: right;
-  margin: 5px;
-  
+  margin: 5px; 
 }
+
 .btn-menu {
-  background-color: var(--verde3);
-  color: rgb(255, 255, 255);
+  display: inline-block;
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 20px; 
   margin: 4px;
 }
-.btn-menu:hover {
-  background-color: rgb(169, 191, 4, 1);
-  color: rgb(0, 0, 0);
-}
+
 
 .App-cuerpo {
   text-align: center;
-  color:var(--verde3);
 }
 
 /* Responsive layout */
