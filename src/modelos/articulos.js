@@ -6,6 +6,10 @@ const articulos = [
     {
         titulo: "Objetivos",
         texto: "Crear un front de muestra de la herramienta web para conseguir clientes, colaboradores e inversores"
+    },
+    {
+        titulo: "Plan",
+        texto: "Detalle del plan con los pasos a seguir. Propuesta de negocio y retorno de inverción"
     }
 ];
 

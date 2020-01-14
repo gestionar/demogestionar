@@ -6,7 +6,7 @@ const ConfigPag = (props) => {
   return (
     <div className="CnfPag-Cuerpo">
 
-      <BarraLateral />
+      <BarraLateral estilos={props.estilos} handleThemeClick={props.handleThemeClick}/>
 
       <div style={{width: "100%"}}>
         {props.colores.map(col => (

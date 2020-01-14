@@ -9,18 +9,21 @@ import ConfigPag from './paginas/ConfigPag';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartBar, faCheckSquare, faUser, faCog, faHome, faChartPie } from '@fortawesome/free-solid-svg-icons'
 
-const estilos = { //fondo1Menu, fondo2Menu, fondoBoton, textoBoton, fondoCuerpo, textoCuerpo
-  clarito: ["cian", "lila", "verdeagua", "grisoscuro", "grisclaro", "bordo"], 
-  oliva: ["verde3", "verde3", "verde3", "blanco1", "blancoo1", "verde1"],
-  defecto: ["lila", "violeta", "rosa", "grisoscuro"]
-};
+
+const temas = [
+  {tema: "clarito", bg1Menu: "cian", bg2Menu: "lila", bgBtn: "verdeagua", clrBtn: "grisoscuro", bgCuerpo: "grisclaro", clrCuerpo: "bordo"},
+  {tema: "oliva", bg1Menu: "verde3", bg2Menu: "verde3", bgBtn: "verde3", clrBtn: "blanco1", bgCuerpo: "blanco1", clrCuerpo: "verde1"},
+  {tema: "defecto", bg1Menu: "lila", bg2Menu: "violeta", bgBtn: "rosa", clrBtn: "grisoscuro", bgCuerpo: "blanco", clrCuerpo: "grisoscuro"},
+  {tema: "oscuro", bg1Menu: "gris", bg2Menu: "grisclaro", bgBtn: "grisoscuro", clrBtn: "amarilloclaro", bgCuerpo: "blanco", clrCuerpo: "bordo"}
+]
 
 const menuPpal = [
   {btn: "Inicio", ruta: "/inicio", icono: faHome},
   {btn: "Contactos", ruta: "/contactos", icono: faUser},
   {btn: "Cuentas", ruta: "/cuentas", icono: faCheckSquare},
   {btn: "Reportes", ruta: "/reportes", icono: faChartPie},
-  {btn: "Configuración", ruta: "configuracion", icono: faCog}];
+  {btn: "Configuración", ruta: "configuracion", icono: faCog}
+];
 
 class App extends Component {
   constructor () {
@@ -30,7 +33,9 @@ class App extends Component {
       articulos:["Introducción", "Objetivos", "Plan de negocio"],
       menuInicio: ["Introducción", "Objetivos", "Plan"],
       menuContactos: ["Buscar", "Agregar"],
-      estilo: estilos.oliva,
+      estilos: temas,
+      tema: temas[2],
+
       colores: [
         "amarillo", "amarilloclaro", "azul", "bordo", "celeste",
         "celesteclaro", "cian", "grisclaro", "gris", "grisoscuro",
@@ -40,13 +45,18 @@ class App extends Component {
         "verdeoscuro", "violeta", "test"
       ]      
     }
-  }
+  };
+
+  handleThemeClick = temaIdx => {
+    this.setState({ tema: temas[temaIdx] })
+  };
+
   render () {
     return (
       <div className="App">
         <header
           className="App-header"
-          style={{backgroundImage: `linear-gradient(var(--${this.state.estilo[0]}), var(--${this.state.estilo[1]}))`}}>
+          style={{backgroundImage: `linear-gradient(var(--${this.state.tema.bg1Menu}), var(--${this.state.tema.bg2Menu}))`}}>
           <div className="App-logo">
             <a href="http://gestionar.github.io/demogestionar">
               <img src={logo} alt="logo" style={{width: 30}}></img>
@@ -57,21 +67,37 @@ class App extends Component {
 
           <div className="App-menu">
             {this.state.menuApp.map(obj=> (
-              <Link 
-                to={obj.ruta}
-                className="btn-menu"
-                style={{backgroundColor: `var(--${this.state.estilo[2]})`,
-                color: `var(--${this.state.estilo[3]})`}}
-              ><FontAwesomeIcon icon={obj.icono} />&nbsp;{obj.btn}</Link>)
+                <Link className="btn-menu"
+                  to={obj.ruta}
+                  style={{backgroundColor: `var(--${this.state.tema.bgBtn})`,
+                          color: `var(--${this.state.tema.clrBtn})`}}>
+                  <FontAwesomeIcon icon={obj.icono} />&nbsp;{obj.btn}
+                </Link>)
             )}
           </div>
         </header>
 
-        <div className="App-cuerpo" style={{backgroundColor: `var(--${this.state.estilo[4]})`, color:`var(--${this.state.estilo[5]})`}}>
+        <div
+          className="App-cuerpo"
+          style={{
+            backgroundColor: `var(--${this.state.tema.bgCuerpo})`,
+            color:`var(--${this.state.tema.clrCuerpo})`
+          }}>
           <Switch>
-            <Route exact path='/inicio' render={() => <InicioPag menuInicio={this.state.menuInicio} articulos={this.state.articulos}/>} />
+            <Route exact path='/inicio' render={() =>
+              <InicioPag
+                menuInicio={this.state.menuInicio}
+                articulos={this.state.articulos}/
+              >}
+            />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
-            <Route exact path='/configuracion' render={() => <ConfigPag colores={this.state.colores} estilo={this.state.estilo}/>} />
+            <Route exact path='/configuracion' render={() => 
+              <ConfigPag
+                colores={this.state.colores} 
+                estilos={this.state.estilos}
+                handleThemeClick={this.handleThemeClick}
+              />}
+            />
           </Switch>
         </div>
       </div>

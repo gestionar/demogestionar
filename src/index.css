@@ -1,4 +1,4 @@
-body {
+body{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -15,8 +15,9 @@ code {
   48c*/
 :root {
   --amarillo: #cc4;
-  --amarilloclaro: #ff8;
+  --amarilloclaro: #ffc;
   --azul: #44c;
+  --blanco: #ffe;
   --bordo: #844;
   --celeste: #08f;
   --celesteclaro: #8ff;
@@ -49,4 +50,15 @@ code {
   --amarillo1:#FFFC99;
   --test: rgba(222, 88, 44, 0.6);
   --test2: rgba(171, 196, 4, 0.9);
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
 }
