@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "02a9e194423cca6b24aa0937f253f5d7",
+    "revision": "7275011dd87d0b2e90b66a50ec79d0ed",
     "url": "/demogestionar/index.html"
   },
   {
-    "revision": "4d4707066cf6efb189dd",
-    "url": "/demogestionar/static/css/main.19d808da.chunk.css"
+    "revision": "ae2bc9d5c435d0fc07c6",
+    "url": "/demogestionar/static/css/main.e2acebed.chunk.css"
   },
   {
     "revision": "9256a079dcad7cbc4682",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/demogestionar/static/js/2.44d84898.chunk.js.LICENSE"
   },
   {
-    "revision": "4d4707066cf6efb189dd",
-    "url": "/demogestionar/static/js/main.680a6e21.chunk.js"
+    "revision": "ae2bc9d5c435d0fc07c6",
+    "url": "/demogestionar/static/js/main.65bf744a.chunk.js"
   },
   {
     "revision": "8c41883cb783a9cd88d9",
     "url": "/demogestionar/static/js/runtime-main.f21c6aab.js"
   },
   {
-    "revision": "839f24ec0d6ff84f60b9448cf9a8c4ac",
-    "url": "/demogestionar/static/media/luzInfo.839f24ec.svg"
+    "revision": "24a318f0f5a8c17646ad885b607bad1d",
+    "url": "/demogestionar/static/media/luzInfo.24a318f0.svg"
   }
 ]);
