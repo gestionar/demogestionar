@@ -4,10 +4,9 @@
 }
 
 .App-header {
-  padding: 2px;
-  font-size: 18px;
   text-align: center;
 }
+
 .App-logo {
   display: flex;
   flex-direction: row;
@@ -16,17 +15,19 @@
 
 .App-logo a {
   font-size: 18px;
-  color:var(--negro1);
+  color:var(--grisoscuro);
   padding: 20px;
   font-weight: bold;
   text-decoration: none;
 }
+
 .App-logo a:hover {
   background-color: var(--cian);
 }
+
 .App-menu {
   float: right;
-  margin: 5px; 
+  margin: 6px; 
 }
 
 .btn-menu {
@@ -34,8 +35,9 @@
   text-align: center;
   padding: 12px;
   text-decoration: none;
+  border-radius: 4px;
   font-size: 20px; 
-  margin: 4px;
+  margin: 2px;
 }
 
 .App-cuerpo {

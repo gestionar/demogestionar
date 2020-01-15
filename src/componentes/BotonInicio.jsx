@@ -3,7 +3,7 @@ import './BotonInicio.css';
 
 const BotonesIncio = (props) => (
   <div className="BotonInicio">
-    {props.nombre}
+    <a href={`#art${props.id}`}>{props.nombre}</a>
   </div>
 );
 

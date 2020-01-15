@@ -9,12 +9,16 @@ import ConfigPag from './paginas/ConfigPag';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartBar, faCheckSquare, faUser, faCog, faHome, faChartPie } from '@fortawesome/free-solid-svg-icons'
 
+import { articulos } from './modelos/articulos';
+import { colores } from './modelos/colores';
 
 const temas = [
-  {tema: "clarito", bg1Menu: "cian", bg2Menu: "lila", bgBtn: "verdeagua", clrBtn: "grisoscuro", bgCuerpo: "grisclaro", clrCuerpo: "bordo"},
-  {tema: "oliva", bg1Menu: "verde3", bg2Menu: "verde3", bgBtn: "verde3", clrBtn: "blanco1", bgCuerpo: "blanco1", clrCuerpo: "verde1"},
-  {tema: "defecto", bg1Menu: "lila", bg2Menu: "violeta", bgBtn: "rosa", clrBtn: "grisoscuro", bgCuerpo: "blanco", clrCuerpo: "grisoscuro"},
-  {tema: "oscuro", bg1Menu: "gris", bg2Menu: "grisclaro", bgBtn: "grisoscuro", clrBtn: "amarilloclaro", bgCuerpo: "blanco", clrCuerpo: "bordo"}
+  {tema: "agua", bg1Menu: "cian", bg2Menu: "lila", bgBtn: "verdeazul", clrBtn: "blanco", bgCuerpo: "blanco", clrCuerpo: "grisoscuro"},
+  {tema: "defecto", bg1Menu: "lila", bg2Menu: "violeta", bgBtn: "cian", clrBtn: "grisoscuro", bgCuerpo: "blanco", clrCuerpo: "grisoscuro"},
+  {tema: "claro", bg1Menu: "celesteclaro", bg2Menu: "grisclaro", bgBtn: "rosaclaro", clrBtn: "grisoscuro", bgCuerpo: "amarilloclaro", clrCuerpo: "negro"},
+  {tema: "oliva", bg1Menu: "verde3", bg2Menu: "verde3", bgBtn: "verde3", clrBtn: "blanco1", bgCuerpo: "amarillo1", clrCuerpo: "negro1"},
+  {tema: "oscuro", bg1Menu: "gris", bg2Menu: "grisclaro", bgBtn: "grisoscuro", clrBtn: "amarilloclaro", bgCuerpo: "blanco", clrCuerpo: "bordo"},
+  {tema: "toronja", bg1Menu: "negro", bg2Menu: "grisoscuro", bgBtn: "naranja", clrBtn: "blanco", bgCuerpo: "blanco", clrCuerpo: "negro"},
 ]
 
 const menuPpal = [
@@ -22,7 +26,7 @@ const menuPpal = [
   {btn: "Contactos", ruta: "/contactos", icono: faUser},
   {btn: "Cuentas", ruta: "/cuentas", icono: faCheckSquare},
   {btn: "Reportes", ruta: "/reportes", icono: faChartPie},
-  {btn: "Configuración", ruta: "configuracion", icono: faCog}
+  {btn: "Configuración", ruta: "/configuracion", icono: faCog}
 ];
 
 class App extends Component {
@@ -30,25 +34,17 @@ class App extends Component {
     super ();
     this.state = {
       menuApp: menuPpal,
-      articulos:["Introducción", "Objetivos", "Plan de negocio"],
+      articulos,
       menuInicio: ["Introducción", "Objetivos", "Plan"],
       menuContactos: ["Buscar", "Agregar"],
-      estilos: temas,
-      tema: temas[2],
-
-      colores: [
-        "amarillo", "amarilloclaro", "azul", "bordo", "celeste",
-        "celesteclaro", "cian", "grisclaro", "gris", "grisoscuro",
-        "lila", "lilaoscuro", "magenta", "mostaza", "naranja",
-        "rojo", "rosa", "rosaclaro", "rosaoscuro", "uva",
-        "verde", "verdefluor", "verdeagua", "verdeazul", "verdeclaro",
-        "verdeoscuro", "violeta", "test"
-      ]      
+      estilos: temas, //acomodar estos objetos como si vinieran de la api
+      tema: temas[1],
+      colores
     }
   };
 
   handleThemeClick = temaIdx => {
-    this.setState({ tema: temas[temaIdx] })
+    this.setState({ tema: this.state.estilos[temaIdx] })
   };
 
   render () {
@@ -66,14 +62,20 @@ class App extends Component {
           </div>
 
           <div className="App-menu">
-            {this.state.menuApp.map(obj=> (
-                <Link className="btn-menu"
-                  to={obj.ruta}
-                  style={{backgroundColor: `var(--${this.state.tema.bgBtn})`,
-                          color: `var(--${this.state.tema.clrBtn})`}}>
-                  <FontAwesomeIcon icon={obj.icono} />&nbsp;{obj.btn}
-                </Link>)
-            )}
+            {this.state.menuApp.map((obj, idx)=> (
+              <Link
+                className="btn-menu"
+                to={obj.ruta}
+                style={{
+                  backgroundColor: `var(--${this.state.tema.bgBtn})`,
+                  color: `var(--${this.state.tema.clrBtn})`
+                }}
+                onClick={ () =>
+                  console.log(`se cliqueó ${idx}`)
+                }>
+                <FontAwesomeIcon icon={obj.icono} />&nbsp;{obj.btn}
+              </Link>
+            ))}
           </div>
         </header>
 
@@ -87,8 +89,8 @@ class App extends Component {
             <Route exact path='/inicio' render={() =>
               <InicioPag
                 menuInicio={this.state.menuInicio}
-                articulos={this.state.articulos}/
-              >}
+                articulos={this.state.articulos}
+              />}
             />
             <Route exact path='/contactos' render={() => <ContactosPag/>} />
             <Route exact path='/configuracion' render={() => 

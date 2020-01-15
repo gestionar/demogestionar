@@ -15,12 +15,12 @@ code {
   48c*/
 :root {
   --amarillo: #cc4;
-  --amarilloclaro: #ffc;
-  --azul: #44c;
-  --blanco: #ffe;
+  --amarilloclaro: #ffe;
+  --azul: #48c;
+  --blanco: #fff;
   --bordo: #844;
   --celeste: #08f;
-  --celesteclaro: #8ff;
+  --celesteclaro: #eff;
   --cian: #4cc;
   --grisclaro: #ccc;
   --gris: #888;
@@ -29,17 +29,18 @@ code {
   --lilaoscuro: #448;
   --magenta: #c4c;
   --mostaza: #880;
+  --negro: #111;
   --naranja: #f80;
   --rojo: #c44;
-  --rosa: #c8c;
-  --rosaclaro: #f88;
+  --rosa: #f88;
+  --rosaclaro: #fee;
   --rosaoscuro: #c48;
   --uva: #848;
   --verde: #4c4;
   --verdefluor: #8f0;
   --verdeagua: #4c8; 
   --verdeazul: #088;
-  --verdeclaro: #8f8;
+  --verdeclaro: #efe;
   --verdeoscuro: #080;
   --violeta: #84c;
   --verde1: #ABD904;

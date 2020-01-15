@@ -1,0 +1,28 @@
+.BarraLat-columna {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+    color: var(--negro);
+  }
+
+.BarraLat-fila {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px;
+}
+
+.BarraLat-muestra {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.BarraLat-btn {
+    height: 40px;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+}
