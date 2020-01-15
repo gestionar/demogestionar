@@ -15,7 +15,7 @@ const InicioPag = (props) => {
       </div>
 
       <div className="Inicio-indice">
-        <h3 style={{"color": "var(--grisoscuro)"}}>Índice</h3>
+        <h3>Índice</h3>
         <BotonesIncio opciones={props.articulos}/>
       </div>
       

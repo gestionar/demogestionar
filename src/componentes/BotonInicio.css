@@ -1,8 +1,12 @@
 .BotonInicio {
-    background-color: var(--grisclaro);
     font-size: 18px;
-    padding: 5px;
-    margin: 5px;
+    padding: 12px;
+    margin: 4px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.BotonInicio a {
+    text-decoration: none;
+    color: var(--grisoscuro);
 }

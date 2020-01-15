@@ -1,24 +1,26 @@
 import React from 'react';
-import './BarraLateral.css';
+import './TemasLista.css';
 
-const BarraLateral = (props) => (
-  <div className="BarraLat-columna">
+const TemasLista = (props) => (
+  <div className="TemasLista-columna">
     <h2>Temas</h2>
     {props.estilos.map((obj, idx) => (  
-      <div className="BarraLat-fila">
-        <div className="BarraLat-muestra"
+      <div className="TemasLista-fila">
+        <div className="TemasLista-muestra"
           style={{
             backgroundImage: `linear-gradient(var(--${obj.bg1Menu}), var(--${obj.bg2Menu}))`,
             color: `var(--${obj.clrBtn})`
-          }}>{idx}
+          }}>{idx+1}
         </div>
-        <div className="BarraLat-muestra"
+        <div className="TemasLista-muestra"
           style={{
             backgroundColor: `var(--${obj.bgCuerpo})`,
             color: `var(--${obj.clrCuerpo})`
           }}>{obj.tema}
         </div>
-        <button className="BarraLat-btn"
+        <button
+          className="TemasLista-btn"
+          title={`apariencia ${obj.tema}`}
           style={{
             backgroundColor: `var(--${obj.bgBtn})`,
             color: `var(--${obj.clrBtn})`
@@ -27,9 +29,8 @@ const BarraLateral = (props) => (
           Aplicar
         </button>
       </div>
-
     ))}
   </div>
 );
 
-export default BarraLateral;
+export default TemasLista;

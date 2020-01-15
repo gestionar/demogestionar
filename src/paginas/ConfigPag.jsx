@@ -1,32 +1,38 @@
 import React from 'react';
 import './ConfigPag.css'
-import BarraLateral from '../componentes/BarraLateral';
+import TemasLista from '../componentes/TemasLista';
+
+const contColor = {
+  padding:10,
+  margin: 10,
+  borderRadius: 4
+};
 
 const ConfigPag = (props) => {
   return (
     <div className="CnfPag-Cuerpo">
 
-      <BarraLateral estilos={props.estilos} handleThemeClick={props.handleThemeClick}/>
+      <TemasLista estilos={props.estilos} handleThemeClick={props.handleThemeClick}/>
 
-      <div style={{width: "100%"}}>
-        {props.colores.map(col => (
-          <div style={{border: `dashed var(--${col})`}}><h1>{col}</h1>
+      <div>
+        {props.colores.map((col, idx) => (
+          <div style={{...contColor, border: `1px solid var(--${col})`}}><p>{`${idx+1} - ${col}`}</p>
             <div style={{backgroundImage: `linear-gradient(var(--${col}), #000`}}>
-              <h2 style={{background: `var(--${col})`, color:"#000"}}>{col}</h2>
-              <h2 style={{color: `var(--${col})`}}>{col}</h2>
+              <p style={{background: `var(--${col})`, color:"#000"}}>{col}</p>
+              <p style={{color: `var(--${col})`}}>{col}</p>
             </div>
             <div style={{backgroundImage: `linear-gradient(var(--${col}), #fff`}}>
               <p style={{background: `var(--${col})`, color:"#fff"}}>{col}</p>
               <p style={{color: `var(--${col})`}}>{col}</p>
             </div>
             <div>
-              <h2 style={{backgroundImage: `linear-gradient(var(--${col}), #fff`}}>{col}</h2>
-              <h2 style={{
+              <p style={{backgroundImage: `linear-gradient(var(--${col}), #fff`}}>{col}</p>
+              <p style={{
                 backgroundImage: `linear-gradient(#fff, var(--${col})`,
                 color: `var(--${col})`
-              }}>{col}</h2>
+              }}>{col}</p>
             </div>
-            <h1 style={{color: `var(--${col})`}}>{col}</h1>
+            <p style={{color: `var(--${col})`}}>{col}</p>
           </div>
         ))}
       </div>

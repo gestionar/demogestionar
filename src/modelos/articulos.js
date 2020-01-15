@@ -22,5 +22,9 @@ export const articulos = [
     {
         titulo: "lorem",
         texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis laboriosam a neque. Beatae culpa minima quisquam! Voluptates totam autem cupiditate natus temporibus perspiciatis nemo earum. Voluptatum nam tempora asperiores numquam."
+    },
+    {
+        titulo: "Contacto",
+        texto: "Datos de contacto"
     }
 ];

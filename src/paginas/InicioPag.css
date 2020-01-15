@@ -15,6 +15,7 @@
 
 .Inicio-detalle {
     grid-area: det;
+    text-align: center;
 }
 
 .Inicio-pie {

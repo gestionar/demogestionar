@@ -1,28 +1,30 @@
-.BarraLat-columna {
+.TemasLista-columna {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: var(--blanco);
     color: var(--negro);
+    padding: 6px;
   }
 
-.BarraLat-fila {
+.TemasLista-fila {
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 4px;
 }
 
-.BarraLat-muestra {
-    width: 100px;
+.TemasLista-muestra {
+    width: 140px;
     height: 40px;
     text-align: center;
     line-height: 40px;
 }
 
-.BarraLat-btn {
+.TemasLista-btn {
     height: 40px;
     border-radius: 4px;
     display: inline-block;
     width: auto;
     text-align: center;
+    cursor: pointer;
 }

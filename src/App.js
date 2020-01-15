@@ -7,7 +7,7 @@ import ContactosPag from './paginas/ContactosPag';
 import ConfigPag from './paginas/ConfigPag';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartBar, faCheckSquare, faUser, faCog, faHome, faChartPie } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faBell, faUser, faCog, faChartPie } from '@fortawesome/free-solid-svg-icons'
 
 import { articulos } from './modelos/articulos';
 import { colores } from './modelos/colores';
@@ -22,9 +22,9 @@ const temas = [
 ]
 
 const menuPpal = [
-  {btn: "Inicio", ruta: "/inicio", icono: faHome},
+  {btn: "Inicio", ruta: "/inicio", icono: faBell},
   {btn: "Contactos", ruta: "/contactos", icono: faUser},
-  {btn: "Cuentas", ruta: "/cuentas", icono: faCheckSquare},
+  {btn: "Cuentas", ruta: "/cuentas", icono: faBook},
   {btn: "Reportes", ruta: "/reportes", icono: faChartPie},
   {btn: "Configuración", ruta: "/configuracion", icono: faCog}
 ];
@@ -39,13 +39,17 @@ class App extends Component {
       menuContactos: ["Buscar", "Agregar"],
       estilos: temas, //acomodar estos objetos como si vinieran de la api
       tema: temas[1],
-      colores
+      colores,
+      menuActivo: null
     }
   };
 
   handleThemeClick = temaIdx => {
     this.setState({ tema: this.state.estilos[temaIdx] })
   };
+  handleMenuActivo = menuIdx => {
+    this.setState({ menuActivo: menuIdx })
+  }
 
   render () {
     return (
@@ -53,25 +57,26 @@ class App extends Component {
         <header
           className="App-header"
           style={{backgroundImage: `linear-gradient(var(--${this.state.tema.bg1Menu}), var(--${this.state.tema.bg2Menu}))`}}>
-          <div className="App-logo">
+          
+          <div className="App-logo" title="a la misma fuente">
             <a href="http://gestionar.github.io/demogestionar">
-              <img src={logo} alt="logo" style={{width: 30}}></img>
+              <img src={logo} alt="logo" width="35px" align="left"></img>
               &nbsp;Gestion-R&nbsp;
-              <FontAwesomeIcon icon={faChartBar} />
             </a>
           </div>
 
           <div className="App-menu">
             {this.state.menuApp.map((obj, idx)=> (
               <Link
+                title={`ir a ${obj.btn}`}
                 className="btn-menu"
                 to={obj.ruta}
                 style={{
-                  backgroundColor: `var(--${this.state.tema.bgBtn})`,
+                  backgroundColor: idx === this.state.menuActivo ? `var(--test2)` : `var(--${this.state.tema.bgBtn})`,
                   color: `var(--${this.state.tema.clrBtn})`
                 }}
                 onClick={ () =>
-                  console.log(`se cliqueó ${idx}`)
+                  this.handleMenuActivo(idx)
                 }>
                 <FontAwesomeIcon icon={obj.icono} />&nbsp;{obj.btn}
               </Link>
