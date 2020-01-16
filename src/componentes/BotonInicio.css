@@ -10,3 +10,8 @@
     text-decoration: none;
     color: var(--grisoscuro);
 }
+
+.BotonInicio a:hover {
+    font-size: 20px;
+    font-weight: bold;
+}

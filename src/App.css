@@ -40,6 +40,10 @@
   margin: 2px;
 }
 
+.btn-menu:hover{
+  font-size: 20px;
+  font-weight: bold ;
+}
 
 
 /* Responsive layout */
