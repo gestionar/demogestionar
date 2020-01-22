@@ -37,6 +37,7 @@ Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
  
  
 test de bifurcación - actualizar una rama secundaria con este texto del master original
+test de bifurcación2 - actualizar localmente desde la rama sebastiang y proponer un pull al original
 
 
 ## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
