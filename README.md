@@ -36,7 +36,7 @@ Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
  - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
  
  
-
+test de bifurcación - actualizar una rama secundaria con este texto del master original
 
 
 ## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
