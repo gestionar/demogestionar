@@ -19,11 +19,12 @@
 }
 
 .App-hea-btn {
+  font-size: 3vh;
   display: flex;
   align-items: center;
   border-radius: .4vw;
-  padding: .8vh;
-  margin: .2vw;
+  padding: 2vh;
+  margin: .5vw;
   text-decoration: none;
 }
 
@@ -46,7 +47,7 @@ button {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .btn-txt {
     display: none;
   }
