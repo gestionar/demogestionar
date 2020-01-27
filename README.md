@@ -1,8 +1,10 @@
-Proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
+# Proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
+
 ## Objetivos
- - Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
- - Implementar normas de estandarización que faciliten el desarrollo en equipo
- - Detallar el plan a largo plazo, el propósito y la visión del proyecto general
+
+- Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
+- Implementar normas de estandarización que faciliten el desarrollo en equipo
+- Detallar el plan a largo plazo, el propósito y la visión del proyecto general
 
 ## BPP (Buenas Prácticas de Programación)
 
@@ -25,36 +27,35 @@ Proyecto de desarrollo web para la asistencia en la gestión de recursos empresa
 **varios** ejemplos y plantillas.<br />
 
 ### Convenciones de nombrado
- - Métodos
- - Módulos
+
+- Métodos
+- Módulos
 
 componentes: empiezan con mayúscula (fichero y archivo.jsx). Para diferenciarlos de las etiquetas html convencionales. Ejemplo: FilaCliente, BtnNuevoRegistro<br />
 variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos.<br />
 Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
- - [ ] ES6 funciones flecha, let y const
- - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
- 
- 
-test de bifurcación - actualizar una rama secundaria con este texto del master original
-test de bifurcación2 - actualizar localmente desde la rama sebastiang y proponer un pull al original
-
+- [ ] ES6 funciones flecha, let y const
+- [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
 
 ## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
 
-Ver documentación: https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+Ver documentación: <https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line>
 
 Clonar el repositorio y copiar la url
 
 Abrir una terminal en la carpeta superior al proyecto y escribir:
-```
+
+```bash
 git clone `URL del repositorio remoto`
 ```
 
 esto crea una carpeta con el nombre del repositorio y directorio .git oculto con los datos de configuración del repositorio
-```
+
+```bash
 git remote -v
 ```
+
 te muestra la dirección de github del repo que acabas de crear<br />
 
 crear un vínculo con el repo para actualizar el local (si el dueño original es otro, primero hay que hacer un fork, después copiar el url del repo en nuestro perfil)
@@ -75,12 +76,13 @@ git push origin master
 
 Para desplegar a gh-pages:
 
-https://github.com/gitname/react-gh-pages/blob/master/README.md
+<https://github.com/gitname/react-gh-pages/blob/master/README.md>
 
-```
-$ npm run deploy
+```bash
+npm run deploy
 ```
 
+### Hacer un fork y trabajar en un proyecto paralelo para luego fundir actualizaciones mejor controladas
 
 #### Cloning Your Copy of the Repository Locally
 
