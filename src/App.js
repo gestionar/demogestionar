@@ -7,23 +7,15 @@ import ContactosPag from './paginas/ContactosPag';
 import ConfigPag from './paginas/ConfigPag';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faBell, faUser, faCog, faChartPie } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faBell, faUsers, faCog, faChartPie, faBars, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
+import { temas } from './modelos/temas';
 import { articulos } from './modelos/articulos';
 import { colores } from './modelos/colores';
 
-const temas = [
-  {tema: "agua", bg1Menu: "cian", bg2Menu: "lila", bgBtn: "verdeazul", clrBtn: "blanco", bgCuerpo: "blanco", clrCuerpo: "grisoscuro"},
-  {tema: "defecto", bg1Menu: "lila", bg2Menu: "violeta", bgBtn: "cian", clrBtn: "grisoscuro", bgCuerpo: "blanco", clrCuerpo: "grisoscuro"},
-  {tema: "claro", bg1Menu: "celesteclaro", bg2Menu: "grisclaro", bgBtn: "rosaclaro", clrBtn: "grisoscuro", bgCuerpo: "amarilloclaro", clrCuerpo: "negro"},
-  {tema: "oliva", bg1Menu: "verde3", bg2Menu: "verde3", bgBtn: "verde3", clrBtn: "blanco1", bgCuerpo: "amarillo1", clrCuerpo: "negro1"},
-  {tema: "oscuro", bg1Menu: "gris", bg2Menu: "grisclaro", bgBtn: "grisoscuro", clrBtn: "amarilloclaro", bgCuerpo: "blanco", clrCuerpo: "bordo"},
-  {tema: "toronja", bg1Menu: "negro", bg2Menu: "grisoscuro", bgBtn: "naranja", clrBtn: "blanco", bgCuerpo: "blanco", clrCuerpo: "negro"},
-]
-
 const menuPpal = [
   {btn: "Inicio", ruta: "/inicio", icono: faBell},
-  {btn: "Contactos", ruta: "/contactos", icono: faUser},
+  {btn: "Contactos", ruta: "/contactos", icono: faUsers},
   {btn: "Cuentas", ruta: "/cuentas", icono: faBook},
   {btn: "Reportes", ruta: "/reportes", icono: faChartPie},
   {btn: "Configuración", ruta: "/configuracion", icono: faCog}
@@ -54,22 +46,29 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <header
+        <div
           className="App-header"
-          style={{backgroundImage: `linear-gradient(var(--${this.state.tema.bg1Menu}), var(--${this.state.tema.bg2Menu}))`}}>
+          style={{backgroundImage: `linear-gradient(var(--${this.state.tema.bg1Menu}),
+          var(--${this.state.tema.bg2Menu}))`}}>
           
-          <div className="App-logo" title="a la misma fuente">
-            <a href="http://gestionar.github.io/demogestionar">
-              <img src={logo} alt="logo" width="35px" align="left"></img>
-              &nbsp;Gestion-R&nbsp;
+          <div className="App-hea-izq">
+            <button className="App-hea-btn">
+              <FontAwesomeIcon icon={faBars} /><div className="btn-txt">&nbsp;Menú</div>
+            </button>
+            <a
+              className="App-hea-btn App-logo"
+              title="a la misma fuente"
+              href="http://gestionar.github.io/demogestionar">
+                <img src={logo} alt="logo" width="24vw" align="left" />
+                <div className="btn-txt">&nbsp;Gestion-R</div>
             </a>
           </div>
 
-          <div className="App-menu">
+          <div className="App-hea-med">
             {this.state.menuApp.map((obj, idx)=> (
               <Link
+                className="App-hea-btn"
                 title={`ir a ${obj.btn}`}
-                className="btn-menu"
                 to={obj.ruta}
                 style={{
                   backgroundColor: idx === this.state.menuActivo ? `var(--test2)` : `var(--${this.state.tema.bgBtn})`,
@@ -78,11 +77,17 @@ class App extends Component {
                 onClick={ () =>
                   this.handleMenuActivo(idx)
                 }>
-                <FontAwesomeIcon icon={obj.icono} />&nbsp;{obj.btn}
+                <FontAwesomeIcon icon={obj.icono} /><div className="btn-txt">&nbsp;{obj.btn}</div>
               </Link>
             ))}
           </div>
-        </header>
+
+          <div className="App-hea-der">
+            <button className="App-hea-btn">
+              <FontAwesomeIcon icon={faUserCircle} /><div className="btn-txt">&nbsp;Usuario</div>
+            </button>
+          </div>
+        </div>
 
         <div
           className="App-cuerpo"

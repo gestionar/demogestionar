@@ -1,14 +1,25 @@
 # Proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
 
+## Índice
+
+- [Objetivos](#objetivos)
+- [Buenas Prácticas de Programación](#buenas-practicas-de-programacion)
+  - [Árbol de ficheros](#arbol-de-carpetas-del-codigo-fuente)
+  - [Convenciones de nombrado](#convenciones-de-nombrado)
+- [Desplegar en gh-pages](#desplegar-en-gh-pages)
+- [Comandos git frecuentes](#comandos-git-frecuentes)
+  - [Clonar un repositorio](#clonar-un-repositorio)
+  - [Sincronizar un proyecto bifurcado](#sincronizar-un-proyecto-bifurcado)
+
 ## Objetivos
 
 - Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
 - Implementar normas de estandarización que faciliten el desarrollo en equipo
 - Detallar el plan a largo plazo, el propósito y la visión del proyecto general
 
-## BPP (Buenas Prácticas de Programación)
+## Buenas Practicas de Programacion
 
-### Árbol de carpetas del codigo fuente
+### Arbol de carpetas del código fuente
 
 ```
 /src
@@ -19,26 +30,38 @@
   /utiles
   /varios
 ```
-**paginas** contiene las vistas de cada sección del menú: Contactos, Cuentas, Informes, Configuración, etc.<br />
-**componentes** almacena los distintos componentes que son llamados para completar las páginas.<br />
-**servicios** tiene las llamadas AJAX a la api del back, o sea que todos los módulos de comunicación a la API se encuentran en esta carpeta.<br />
-**modelos** es provisoria y emula los resultados devueltos por la api del back, conteniendo arreglos y objetos json.<br />
-**utilies** herramientas de formateo y validación de uso compartido.<br />
-**varios** ejemplos y plantillas.<br />
+**paginas** contiene las vistas de cada sección del menú: Contactos, Cuentas, Informes, Configuración, etc.\
+**componentes** almacena los distintos componentes que son llamados para completar las páginas.\
+**servicios** tiene las llamadas AJAX a la api del back, o sea que todos los módulos de comunicación a la API se encuentran en esta carpeta.\
+**modelos** es provisoria y emula los resultados devueltos por la api del back, conteniendo arreglos y objetos json.\
+**utilies** herramientas de formateo y validación de uso compartido.\
+**varios** ejemplos y plantillas.\
 
 ### Convenciones de nombrado
 
 - Métodos
 - Módulos
 
-componentes: empiezan con mayúscula (fichero y archivo.jsx). Para diferenciarlos de las etiquetas html convencionales. Ejemplo: FilaCliente, BtnNuevoRegistro<br />
+componentes: empiezan con mayúscula (fichero y archivo.jsx). Para diferenciarlos de las etiquetas html convencionales. Ejemplo: FilaCliente, BtnNuevoRegistro\
 variables: sensibleMayuscula no muy largas que den a entender lo que hacen y para que existen, en castellano sin lunfardos.<br />
 Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 
 - [ ] ES6 funciones flecha, let y const
 - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
 
-## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
+## Desplegar en gh-pages
+
+<https://github.com/gitname/react-gh-pages/blob/master/README.md>
+
+```bash
+npm run deploy
+```
+
+## Comandos git frecuentes
+
+### Clonar un repositorio
+
+Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
 
 Ver documentación: <https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line>
 
@@ -56,7 +79,7 @@ esto crea una carpeta con el nombre del repositorio y directorio .git oculto con
 git remote -v
 ```
 
-te muestra la dirección de github del repo que acabas de crear<br />
+te muestra la dirección de github del repo que acabas de crear\
 
 crear un vínculo con el repo para actualizar el local (si el dueño original es otro, primero hay que hacer un fork, después copiar el url del repo en nuestro perfil)
 
@@ -74,15 +97,10 @@ git commit -m _texto descriptivo de los cambios_
 
 git push origin master
 
-Para desplegar a gh-pages:
 
-<https://github.com/gitname/react-gh-pages/blob/master/README.md>
+### Sincronizar un proyecto bifurcado
 
-```bash
-npm run deploy
-```
-
-### Hacer un fork y trabajar en un proyecto paralelo para luego fundir actualizaciones mejor controladas
+(traducir)
 
 #### Cloning Your Copy of the Repository Locally
 
@@ -171,4 +189,4 @@ Once you have resolved these merge conflicts by editing the code and removing th
 **"Nested" repos are never permitted**.  Therefore, if you have important code, such as your projects, that belongs in its own repo, **be sure to put that code in folders outside of the class repo**.
 
 mas info:
-https://git.generalassemb.ly/SEI-CC/SEI-CC-4
+[SEI-CC](https://git.generalassemb.ly/SEI-CC/SEI-CC-4)
