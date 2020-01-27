@@ -49,8 +49,8 @@ code {
   --blanco1:#F2F2F2;
   --negro1:#0D0D0D;
   --amarillo1:#FFFC99;
-  --test: rgba(222, 88, 44, 0.6);
-  --test2: rgba(211, 210, 208, 0.3);
+  --test1: rgba(212, 212, 212, 0.404);
+  --test2: rgba(255, 255, 255, 0.24);
 }
 
 .fila {
