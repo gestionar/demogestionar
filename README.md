@@ -1,14 +1,22 @@
 # Proyecto de desarrollo web para la asistencia en la gestión de recursos empresariales
 
+## Índice
+
+- [Objetivos](#objetivos)
+- [Buenas Prácticas de Programación](#buenas-practicas-de-programacion)
+  - [Árbol de ficheros](#arbol-de-carpetas-del-codigo-fuente)
+  - [Convenciones de nombrado](#convenciones-de-nombrado)
+- [Comandos git frecuentes](#comandos-git-frecuentes)
+
 ## Objetivos
 
 - Crear un front de muestra de la herramienta para conseguir clientes, colaboradores e inversores
 - Implementar normas de estandarización que faciliten el desarrollo en equipo
 - Detallar el plan a largo plazo, el propósito y la visión del proyecto general
 
-## BPP (Buenas Prácticas de Programación)
+## Buenas Prácticas de Programación
 
-### Árbol de carpetas del codigo fuente
+### Árbol de carpetas del código fuente
 
 ```
 /src
@@ -38,7 +46,9 @@ Ejemplos: crearEstado iniciarEstado traerListClientes atenderClick.
 - [ ] ES6 funciones flecha, let y const
 - [ ] Manejo centralizado de la info y cambios de estado desde App.js enviando métodos a los componentes hijo
 
-## Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
+## Comandos git frecuentes
+
+Machete de comandos git para inicar la colaboración remota, editar el proyecto y desplegar páginas
 
 Ver documentación: <https://help.github.com/es/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line>
 
