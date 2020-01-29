@@ -52,9 +52,10 @@ class App extends Component {
           var(--${this.state.tema.bg2Menu}))`}}>
           
           <div className="App-hea-izq">
-            <button className="App-hea-btn">
-              <FontAwesomeIcon icon={faBars} /><div className="btn-txt">&nbsp;Menú</div>
+            <button className="App-menu-btn App-hea-btn">
+              <FontAwesomeIcon icon={faBars} title={"Menú"}/>
             </button>
+
             <a
               className="App-hea-btn App-logo"
               title="a la misma fuente"
@@ -83,8 +84,8 @@ class App extends Component {
           </div>
 
           <div className="App-hea-der">
-            <button className="App-hea-btn">
-              <FontAwesomeIcon icon={faUserCircle} /><div className="btn-txt">&nbsp;Usuario</div>
+            <button className="App-user-btn App-hea-btn">
+              <FontAwesomeIcon icon={faUserCircle} title={"Opciones de usuario"}/>
             </button>
           </div>
         </div>
