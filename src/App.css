@@ -8,24 +8,23 @@
 }
 
 .App-hea-izq {
-  display: flex;
+
 }
 .App-hea-med {
- display: flex;
+  display: flex;
 }
 .App-hea-der {
-  display: flex;
 
 }
 
 .App-hea-btn {
-  font-size: 3vh;
   display: flex;
   align-items: center;
-  border-radius: .4vw;
-  padding: 2vh;
-  margin: .5vw;
   text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: .2rem;
+  padding: .6rem;
+  margin: .1rem;
 }
 
 .App-hea-btn:hover {
@@ -33,11 +32,19 @@
   background-image: linear-gradient(var(--test1), var(--test2));
 }
 
-button {
-  cursor: pointer;
-  border: none;
-}
 
+
+.App-menu-btn {
+  position: fixed;
+  border-radius: .1rem .1rem 1rem;
+}
+.App-user-btn {
+  border-radius: .1rem .1rem .1rem 1rem;
+}
+.App-logo {
+  position: relative;
+  left: 50px;
+}
 
 
 /* Responsive layout */
@@ -48,6 +55,9 @@ button {
 }
 
 @media (max-width: 1000px) {
+  .App-hea-btn {
+    font-size: 1.6rem;
+  }
   .btn-txt {
     display: none;
   }
