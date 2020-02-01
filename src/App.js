@@ -13,6 +13,8 @@ import { temas } from './modelos/temas';
 import { articulos } from './modelos/articulos';
 import { colores } from './modelos/colores';
 
+
+/* un arreglo que contiene todos los componentes posiles a mapear en el menú */
 const menuPpal = [
   {btn: "Inicio", ruta: "/inicio", icono: faBell},
   {btn: "Contactos", ruta: "/contactos", icono: faUsers},
@@ -21,14 +23,21 @@ const menuPpal = [
   {btn: "Configuración", ruta: "/configuracion", icono: faCog}
 ];
 
+/* un arreglo que lista distintas combinaciones de los componentes del menú según el tipo de usuario*/
+const tiposUsuarios = [
+  {tipo: 0, cat: "super-adm", compts : [menuPpal[0], menuPpal[1], menuPpal[2], menuPpal[3], menuPpal[4]]},
+  {tipo: 1, cat: "admin", compts: [menuPpal[0], menuPpal[2], menuPpal[4]]},
+  {tipo: 2, cat: "general", compts: [menuPpal[0]]}
+];
+
 class App extends Component {
   constructor () {
     super ();
     this.state = {
-      menuApp: menuPpal,
+      //menuPpal,
+      tipoUser: tiposUsuarios[0],
       articulos,
       menuInicio: ["Introducción", "Objetivos", "Plan"],
-      menuContactos: ["Buscar", "Agregar"],
       estilos: temas, //acomodar estos objetos como si vinieran de la api
       tema: temas[1],
       colores,
@@ -41,6 +50,9 @@ class App extends Component {
   };
   handleMenuActivo = menuIdx => {
     this.setState({ menuActivo: menuIdx })
+  }
+  handleTipoUser = userIdx => {
+    this.setState({ tipoUser : tiposUsuarios[userIdx]})
   }
 
   render () {
@@ -66,7 +78,7 @@ class App extends Component {
           </div>
 
           <div className="App-hea-med">
-            {this.state.menuApp.map((obj, idx)=> (
+            {this.state.tipoUser.compts.map((obj, idx)=> (
               <Link
                 className="App-hea-btn"
                 title={`ir a ${obj.btn}`}
@@ -84,8 +96,8 @@ class App extends Component {
           </div>
 
           <div className="App-hea-der">
-            <button className="App-user-btn App-hea-btn">
-              <FontAwesomeIcon icon={faUserCircle} title={"Opciones de usuario"}/>
+            <button className="App-user-btn App-hea-btn" onClick={() => this.handleTipoUser(prompt("0 super-adm\n 1 admin\n 2 general"))}>
+              <FontAwesomeIcon icon={faUserCircle} title={"Opciones de usuario"}/>&nbsp;{this.state.tipoUser.cat}
             </button>
           </div>
         </div>
