@@ -52,6 +52,10 @@
   .App-logo {
     display: none;
   }
+  .App-hea-med {
+    position: relative;
+    left: 24px;
+  }
 }
 
 @media (max-width: 1000px) {
