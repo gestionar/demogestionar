@@ -4,20 +4,26 @@
     align-items: center;
     background-color: var(--blanco);
     color: var(--negro);
+    margin: 6px;
     padding: 6px;
   }
 
 .TemasLista-fila {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    text-align: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     padding: 4px;
+
 }
 
 .TemasLista-muestra {
-    width: 140px;
+
     height: 40px;
-    text-align: center;
     line-height: 40px;
+
 }
 
 .TemasLista-btn {
@@ -25,5 +31,4 @@
     border-radius: 4px;
     display: inline-block;
     width: auto;
-    text-align: center;
 }

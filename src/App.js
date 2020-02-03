@@ -37,7 +37,7 @@ class App extends Component {
       //menuPpal,
       tipoUser: tiposUsuarios[0],
       articulos,
-      menuInicio: ["Introducción", "Objetivos", "Plan"],
+      //menuInicio: ["Introducción", "Objetivos", "Plan"],
       estilos: temas, //acomodar estos objetos como si vinieran de la api
       tema: temas[1],
       colores,
@@ -50,10 +50,12 @@ class App extends Component {
   };
   handleMenuActivo = menuIdx => {
     this.setState({ menuActivo: menuIdx })
-  }
-  handleTipoUser = userIdx => {
-    this.setState({ tipoUser : tiposUsuarios[userIdx]})
-  }
+  };
+  handleTipoUser = () => {
+    let userIdx = parseInt(prompt("0 super-adm\n 1 admin\n 2 general", 0));
+    (Number.isInteger(userIdx) && userIdx < 3) ?
+     this.setState({ tipoUser: tiposUsuarios[userIdx]}) : alert("ingrese un valor razonable");
+  };
 
   render () {
     return (
@@ -96,8 +98,9 @@ class App extends Component {
           </div>
 
           <div className="App-hea-der">
-            <button className="App-user-btn App-hea-btn" onClick={() => this.handleTipoUser(prompt("0 super-adm\n 1 admin\n 2 general"))}>
-              <FontAwesomeIcon icon={faUserCircle} title={"Opciones de usuario"}/>&nbsp;{this.state.tipoUser.cat}
+            <button className="App-user-btn App-hea-btn" onClick={() => this.handleTipoUser()}>
+              <FontAwesomeIcon icon={faUserCircle} title={"Opciones de usuario"}/>
+              <div className="btn-txt">&nbsp;{this.state.tipoUser.cat}</div>
             </button>
           </div>
         </div>
