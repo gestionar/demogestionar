@@ -26,6 +26,6 @@ export const colores= [
   "verdeclaro",
   "verdeoscuro",
   "violeta",
-  "test",
+  "test1",
   "test2"
   ];

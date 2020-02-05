@@ -1,6 +1,13 @@
-.CnfPag-Cuerpo {
+.CnfPag-cuerpo {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+}
+
+.CnfPag-muestra {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    border: 6px solid var(--test2);
+    border-radius: 0px 0px 3px 3px;
 }
