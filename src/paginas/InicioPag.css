@@ -1,38 +1,24 @@
-.Inicio-grid {
+.Inicio-layout {
     display: grid;
-    grid-template-areas: 
-        'idx det det det det det'
-        'pie pie pie pie pie pie';
-        grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+    height: 84vh;
+    overflow: hidden;
+
 }
 
 .Inicio-indice {
-    grid-area: idx;
-    background-color: var(--rosaclaro);
-    padding: 10px;
+    background-color: var(--celesteclaro);
     text-align: left;
+    overflow-y: scroll;
 }
 
 .Inicio-detalle {
-    grid-area: det;
     text-align: center;
-}
-
-.Inicio-pie {
-    grid-area: pie;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--negro1);
+    overflow-y: scroll;
 }
 
 @media (max-width: 600px) {
-    .Inicio-grid {
-        grid-template-areas: 
-        'idx idx idx idx idx idx'
-        'det det det det det det'
-        'pie pie pie pie pie pie';
-    }
     .Inicio-indice {
-        text-align: center;
+        display: none;
     }
 }
