@@ -1,0 +1,20 @@
+.ListInd-columna {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.ListInd-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--grisoscuro);
+    border: 1px dotted var(--rosa);
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.ListInd-link:hover {
+    border: 1px solid var(--rojo);
+    background-image: linear-gradient(var(--test1), var(--test2));
+    font-weight: bold;
+}
