@@ -35,6 +35,7 @@ class App extends Component {
     super ();
     this.state = {
       //menuPpal,
+      panelPpal: true,
       tipoUser: tiposUsuarios[0],
       articulos,
       //menuInicio: ["Introducción", "Objetivos", "Plan"],
@@ -44,7 +45,9 @@ class App extends Component {
       menuActivo: null
     }
   };
-
+  handleMenuPpalClick = () => {
+    this.setState({ panelPpal: !this.state.panelPpal });
+  };
   handleThemeClick = temaIdx => {
     this.setState({ tema: this.state.estilos[temaIdx] })
   };
@@ -66,7 +69,7 @@ class App extends Component {
           var(--${this.state.tema.bg2Menu}))`}}>
           
           <div className="App-hea-izq">
-            <button className="App-menu-btn App-hea-btn">
+            <button className="App-menu-btn App-hea-btn" onClick={ () => this.handleMenuPpalClick()}>
               <FontAwesomeIcon icon={faBars} title={"Menú"}/>
             </button>
 
@@ -104,7 +107,15 @@ class App extends Component {
             </button>
           </div>
         </div>
+        <div
 
+          className="nav-izq"
+          style={{ display: this.state.panelPpal ? "block" : "none" }}
+        >
+          <h1>
+          test
+          </h1>
+        </div>
         <div
           className="App-cuerpo"
           style={{
