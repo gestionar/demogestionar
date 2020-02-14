@@ -1,7 +1,7 @@
 .Inicio-layout {
     display: grid;
     grid-template-columns: auto auto;
-    height: 84vh;
+    height: 90vh;
     overflow: hidden;
 
 }
